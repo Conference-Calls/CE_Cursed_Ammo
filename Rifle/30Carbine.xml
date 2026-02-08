@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="30CarbineBase">
+		<defName>Ammo_30Carbine_BFR</defName>
+		<label>.30 Carbine (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_30Carbine_BFR</cookOffProjectile>
+	</ThingDef>
+
+<ThingDef ParentName="Base30CarbineBullet">
+		<defName>Bullet_30Carbine_BFR</defName>
+		<label>.30 Carbine bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetrationSharp>10</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.74</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+<ThingDef ParentName="Base30CarbineBullet">
+		<defName>Bullet_30Carbine_BFR_SB</defName>
+		<label>.30 Carbine bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationSharp>8</armorPenetrationSharp>
+			<armorPenetrationBlunt>18.78</armorPenetrationBlunt>
+			<speed>109</speed>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_30Carbine_BFR</defName>
+		<label>make .30 Carbine (Bioferrite) cartridge x500</label>
+		<description>Craft 500 .30 Carbine (Bioferrite) cartridges.</description>
+		<jobString>Making .30 Carbine (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>7</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_30Carbine_BFR>500</Ammo_30Carbine_BFR>
+		</products>
+		<workAmount>2200</workAmount>
+	</RecipeDef>
+
+</Defs>

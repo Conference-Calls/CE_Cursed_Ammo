@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo20x82mmMauserBase">
+		<defName>Ammo_20x82mmMauser_BFR</defName>
+		<label>20x82mm Mauser (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_20x82mmMauser_BFR</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base20x82mmMauserBullet">
+		<defName>Bullet_20x82mmMauser_BFR</defName>
+		<label>20mm Mauser bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>36</damageAmountBase>
+			<armorPenetrationSharp>26</armorPenetrationSharp>
+			<armorPenetrationBlunt>570.24</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>24</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_20x82mmMauser_BFR</defName>
+		<label>make 20x82mm Mauser (Bioferrite) cartridge x200</label>
+		<description>Craft 200 20x82mm Mauser (Bioferrite) cartridges.</description>
+		<jobString>Making 20x82mm Mauser (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>41</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>41</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_20x82mmMauser_BFR>200</Ammo_20x82mmMauser_BFR>
+		</products>
+		<workAmount>12600</workAmount>
+	</RecipeDef>
+
+</Defs>

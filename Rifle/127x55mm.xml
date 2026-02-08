@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="127x55mmBase">
+		<defName>Ammo_127x55mm_BFR</defName>
+		<label>12.7x55mm (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/SovietLarge/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_127x55mm_BFR</cookOffProjectile>
+	</ThingDef>
+
+<ThingDef ParentName="Base127x55mmBullet">
+		<defName>Bullet_127x55mm_BFR</defName>
+		<label>12.7mm bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>13</damageAmountBase>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>17</amount>
+				</li>
+			</secondaryDamage>
+			<armorPenetrationSharp>14</armorPenetrationSharp>
+			<armorPenetrationBlunt>51.340</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_127x55mm_BFR</defName>
+		<label>make 12.7x55mm cartridge (Bioferrite) cartridge x500</label>
+		<description>Craft 500 12.7x55mm cartridge (Bioferrite) cartridge.</description>
+		<jobString>Making 12.7x55mm cartridge (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>41</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>41</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_127x55mm_BFR>500</Ammo_127x55mm_BFR>
+		</products>
+		<workAmount>14200</workAmount>
+	</RecipeDef>
+
+</Defs>

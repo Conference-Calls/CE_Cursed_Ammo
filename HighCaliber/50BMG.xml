@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo50BMGBase">
+		<defName>Ammo_50BMG_BFR</defName>
+		<label>.50 BMG (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_50BMG_BFR</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base50BMGBullet">
+		<defName>Bullet_50BMG_BFR</defName>
+		<label>.50 BMG bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>26</damageAmountBase>
+			<armorPenetrationSharp>28</armorPenetrationSharp>
+			<armorPenetrationBlunt>360.34</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>14</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_50BMG_BFR</defName>
+		<label>make .50 BMG (Bioferrite) cartridge x200</label>
+		<description>Craft 200 .50 BMG (Bioferrite) cartridges.</description>
+		<jobString>Making .50 BMG (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_50BMG_BFR>200</Ammo_50BMG_BFR>
+		</products>
+		<workAmount>5800</workAmount>
+	</RecipeDef>
+
+</Defs>

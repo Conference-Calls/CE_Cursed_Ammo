@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo25x137mmNATOBase">
+		<defName>Ammo_25x137mmNATO_BFR</defName>
+		<label>25x137mm NATO (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_25x137mmNATO_BFR</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base25x137mmNATOBullet">
+		<defName>Bullet_25x137mmNATO_BFR</defName>
+		<label>25x137mm NATO bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>62</damageAmountBase>
+			<armorPenetrationSharp>56</armorPenetrationSharp>
+			<armorPenetrationBlunt>2238.500</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>33</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_25x137mmNATO_BFR</defName>
+		<label>make 25x137mm NATO (Bioferrite) cartridge x200</label>
+		<description>Craft 200 25x137mm NATO (Bioferrite) cartridges.</description>
+		<jobString>Making 25x137mm NATO (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>101</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>101</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_25x137mmNATO_BFR>200</Ammo_25x137mmNATO_BFR>
+		</products>
+		<workAmount>27800</workAmount>
+	</RecipeDef>
+
+</Defs>

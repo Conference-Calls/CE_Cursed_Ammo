@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo408CheyenneTacticalBase">
+		<defName>Ammo_408CheyenneTactical_BFR</defName>
+		<label>.408 Cheyenne Tactical (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_408CheyenneTactical_BFR</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base408CheyenneTacticalBullet">
+		<defName>Bullet_408CheyenneTactical_BFR</defName>
+		<label>.408 Cheyenne Tactical bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>21</damageAmountBase>
+			<armorPenetrationSharp>24</armorPenetrationSharp>
+			<armorPenetrationBlunt>242</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>9</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_408CheyenneTactical_BFR</defName>
+		<label>make .408 Cheyenne Tactical (Bioferrite) cartridge x200</label>
+		<description>Craft 200 .408 Cheyenne Tactical (Bioferrite) cartridges.</description>
+		<jobString>Making .408 Cheyenne Tactical (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>16</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>16</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_408CheyenneTactical_BFR>200</Ammo_408CheyenneTactical_BFR>
+		</products>
+		<workAmount>4000</workAmount>
+	</RecipeDef>
+
+</Defs>

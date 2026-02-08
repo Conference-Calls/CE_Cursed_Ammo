@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo20x99mmRShVAKBase">
+		<defName>Ammo_20x99mmRShVAK_BFR</defName>
+		<label>20x99mmR ShVAK (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_20x99mmRShVAK_BFR</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base20x99mmRShVAKBullet">
+		<defName>Bullet_20x99mmRShVAK_BFR</defName>
+		<label>20mmR ShVAK bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>35</damageAmountBase>
+			<armorPenetrationSharp>27</armorPenetrationSharp>
+			<armorPenetrationBlunt>540</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>22</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_20x99mmRShVAK_BFR</defName>
+		<label>make 20x99mmR ShVAK (Bioferrite) cartridge x200</label>
+		<description>Craft 200 20x99mmR ShVAK (Bioferrite) cartridges.</description>
+		<jobString>Making 20x99mmR ShVAK (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>44</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>44</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_20x99mmRShVAK_BFR>200</Ammo_20x99mmRShVAK_BFR>
+		</products>
+		<workAmount>12800</workAmount>
+	</RecipeDef>
+
+</Defs>

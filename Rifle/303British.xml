@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="303BritishBase">
+		<defName>Ammo_303British_BFR</defName>
+		<label>.303 British (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_303British_BFR</cookOffProjectile>
+	</ThingDef>
+
+<ThingDef ParentName="Base303BritishBullet">
+		<defName>Bullet_303British_BFR</defName>
+		<label>.303 British bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>13</armorPenetrationSharp>
+			<armorPenetrationBlunt>67</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>6</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+<ThingDef ParentName="Base303BritishBullet">
+		<defName>Bullet_303British_BFR_SB</defName>
+		<label>.303 British bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetrationSharp>12</armorPenetrationSharp>
+			<armorPenetrationBlunt>53.8</armorPenetrationBlunt>
+			<speed>135</speed>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>6</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_303British_BFR</defName>
+		<label>make .303 British (Bioferrite) cartridge x500</label>
+		<description>Craft 500 .303 British (Bioferrite) cartridges.</description>
+		<jobString>Making .303 British (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>14</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>14</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_303British_BFR>500</Ammo_303British_BFR>
+		</products>
+		<workAmount>4000</workAmount>
+	</RecipeDef>
+
+</Defs>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo23x115mmBase">
+		<defName>Ammo_23x115mm_BFR</defName>
+		<label>23x115mm cartridge (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_23x115mm_BFR</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base23x115mmBullet">
+		<defName>Bullet_23x115mm_BFR</defName>
+		<label>23x115mm bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>44</damageAmountBase>
+			<armorPenetrationSharp>29</armorPenetrationSharp>
+			<armorPenetrationBlunt>894.64</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>32</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_23x115mm_BFR</defName>
+		<label>make 23x115mm (Bioferrite) cartridge x200</label>
+		<description>Craft 200 23x115mm (Bioferrite) cartridges.</description>
+		<jobString>Making 23x115mm (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>67</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>67</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_23x115mm_BFR>200</Ammo_23x115mm_BFR>
+		</products>
+		<workAmount>20200</workAmount>
+	</RecipeDef>
+
+</Defs>

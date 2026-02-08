@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo470NitroExpressBase">
+		<defName>Ammo_470NitroExpress_BFR</defName>
+		<label>.470 Nitro Express (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_470NitroExpress_BFR</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base470NitroExpressBullet">
+		<defName>Bullet_470NitroExpress_BFR</defName>
+		<label>.470 Nitro Express bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationSharp>22</armorPenetrationSharp>
+			<armorPenetrationBlunt>139.4</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>12</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_470NitroExpress_BFR</defName>
+		<label>make .470 Nitro Express (Bioferrite) cartridge x200</label>
+		<description>Craft 200 .470 Nitro Express (Bioferrite) cartridges.</description>
+		<jobString>Making .470 Nitro Express (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>13</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>13</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_470NitroExpress_BFR>200</Ammo_470NitroExpress_BFR>
+		</products>
+		<workAmount>4200</workAmount>
+	</RecipeDef>
+
+</Defs>

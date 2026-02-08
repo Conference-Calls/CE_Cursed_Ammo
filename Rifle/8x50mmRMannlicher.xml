@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="8x50mmRMannlicherBase">
+		<defName>Ammo_8x50mmRMannlicher_BFR</defName>
+		<label>8x50mmR Mannlicher (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_8x50mmRMannlicher_BFR</cookOffProjectile>
+	</ThingDef>
+
+<ThingDef ParentName="Base8x50mmRMannlicherBullet">
+		<defName>Bullet_8x50mmRMannlicher_BFR</defName>
+		<label>8x50mmR Mannlicher bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>11</armorPenetrationSharp>
+			<armorPenetrationBlunt>55.74</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>8</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_8x50mmRMannlicher_BFR</defName>
+		<label>make 8x50mmR Mannlicher (Bioferrite) cartridge x500</label>
+		<description>Craft 500 8x50mmR Mannlicher (Bioferrite) cartridges.</description>
+		<jobString>Making 8x50mmR Mannlicher (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>16</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>16</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_8x50mmRMannlicher_BFR>500</Ammo_8x50mmRMannlicher_BFR>
+		</products>
+		<workAmount>4800</workAmount>
+	</RecipeDef>
+
+</Defs>

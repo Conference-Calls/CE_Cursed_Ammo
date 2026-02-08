@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="762x39mmSovietBase">
+		<defName>Ammo_762x39mmSoviet_BFR</defName>
+		<label>7.62x39mm Soviet (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/SovietLarge/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_762x39mmSoviet_BFR</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base762x39mmSovietBullet">
+		<defName>Bullet_762x39mmSoviet_BFR</defName>
+		<label>7.62mm Soviet bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>11</armorPenetrationSharp>
+			<armorPenetrationBlunt>41.08</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base762x39mmSovietBullet">
+		<defName>Bullet_762x39mmSoviet_BFR_SB</defName>
+		<label>7.62mm Soviet bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetrationSharp>9</armorPenetrationSharp>
+			<armorPenetrationBlunt>29.56</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+			<speed>123</speed>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_762x39mmSoviet_BFR</defName>
+		<label>make 7.62x39mm Soviet (Bioferrite) cartridge x500</label>
+		<description>Craft 500 7.62x39mm Soviet (Bioferrite) cartridges.</description>
+		<jobString>Making 7.62x39mm Soviet (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>9</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>9</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_762x39mmSoviet_BFR>500</Ammo_762x39mmSoviet_BFR>
+		</products>
+		<workAmount>2600</workAmount>
+	</RecipeDef>
+
+</Defs>

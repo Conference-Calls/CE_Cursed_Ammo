@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x311mmRBase">
+		<defName>Ammo_40x311mmR_BFR</defName>
+		<label>40x311mmR (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_40x311mmR_BFR</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base40x311mmRBullet">
+		<defName>Bullet_40x311mmR_BFR</defName>
+		<label>40x311mmR bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>105</damageAmountBase>
+			<armorPenetrationSharp>70</armorPenetrationSharp>
+			<armorPenetrationBlunt>6502.5</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>86</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_40x311mmR_BFR</defName>
+		<label>make 40x311mmR (Bioferrite) cartridge x50</label>
+		<description>Craft 50 40x311mmR (Bioferrite) cartridges.</description>
+		<jobString>Making 40x311mmR (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>108</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>108</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_40x311mmR_BFR>50</Ammo_40x311mmR_BFR>
+		</products>
+		<workAmount>30800</workAmount>
+	</RecipeDef>
+
+</Defs>

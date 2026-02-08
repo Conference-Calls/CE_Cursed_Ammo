@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="556x45mmNATOBase">
+		<defName>Ammo_556x45mmNATO_BFR</defName>
+		<label>5.56x45mm NATO (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_556x45mmNATO_BFR</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base556x45mmNATOBullet">
+		<defName>Bullet_556x45mmNATO_BFR</defName>
+		<label>5.56mm NATO bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetrationSharp>12</armorPenetrationSharp>
+			<armorPenetrationBlunt>34.18</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>3</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base556x45mmNATOBullet">
+		<defName>Bullet_556x45mmNATO_BFR_SB</defName>
+		<label>5.56mm NATO bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationSharp>10</armorPenetrationSharp>
+			<armorPenetrationBlunt>21.96</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>3</amount>
+				</li>
+			</secondaryDamage>
+			<speed>142</speed>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_556x45mmNATO_BFR</defName>
+		<label>make 5.56x45mm NATO (Bioferrite) cartridge x500</label>
+		<description>Craft 500 5.56x45mm NATO (Bioferrite) cartridges.</description>
+		<jobString>Making 5.56x45mm NATO (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>7</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_556x45mmNATO_BFR>500</Ammo_556x45mmNATO_BFR>
+		</products>
+		<workAmount>2200</workAmount>
+	</RecipeDef>
+
+</Defs>

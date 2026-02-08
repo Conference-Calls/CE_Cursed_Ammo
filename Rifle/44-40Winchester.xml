@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="44-40WinchesterBase">
+		<defName>Ammo_44-40Winchester_BFR</defName>
+		<label>.44-40 Winchester (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_44-40Winchester_BFR</cookOffProjectile>
+	</ThingDef>
+
+<ThingDef ParentName="Base44-40WinchesterBullet">
+		<defName>Bullet_44-40Winchester_BFR</defName>
+		<label>.44-40 Winchester bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>15</armorPenetrationSharp>
+			<armorPenetrationBlunt>28.6</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>7</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+<ThingDef ParentName="Base44-40WinchesterBullet">
+		<defName>Bullet_44-40Winchester_BFR_SB</defName>
+		<label>.44-40 Winchester bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationSharp>9</armorPenetrationSharp>
+			<armorPenetrationBlunt>11.7</armorPenetrationBlunt>
+			<speed>73</speed>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>7</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_44-40Winchester_BFR</defName>
+		<label>make .44-40 Winchester (Bioferrite) cartridge x500</label>
+		<description>Craft 500 .44-40 Winchester (Bioferrite) cartridges.</description>
+		<jobString>Making .44-40 Winchester (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>13</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>13</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Uranium</li>
+				<li>Bioferrite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_44-40Winchester_BFR>500</Ammo_44-40Winchester_BFR>
+		</products>
+		<workAmount>4200</workAmount>
+	</RecipeDef>
+
+</Defs>
