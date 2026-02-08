@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<CombatExtended.AmmoCategoryDef>
+		<defName>EAC_Bioferrite</defName>
+		<label>bioferrite penetrator</label>
+		<labelShort>BFR</labelShort>
+		<description>Depleted uranium core wrapped in a bioferrite jacket. Ignited bioferrite seeks its target with a hungry malevolence, propelling the core forward like a HEAT round.</description>
+	</CombatExtended.AmmoCategoryDef>
+
+	<CombatExtended.AmmoCategoryDef>
+		<defName>EAC_Silver</defName>
+		<label>consecrated silver</label>
+		<labelShort>C.Silver</labelShort>
+		<description>Shard-infused silver bullet, blessed with an unstable psychic resonance. Blooms into a localized entropy spike on impact, effectively degrading all manner of organized structures.</description>
+	</CombatExtended.AmmoCategoryDef>
+
+</Defs>
