@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="127x55mmBase">
+		<defName>Ammo_127x55mm_EAC_Bioferrite</defName>
+		<label>127x55mm (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/SovietLarge/EAC_Bioferrite</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance>
+		<cookOffProjectile>Bullet_127x55mm_EAC_Bioferrite</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base127x55mmBullet">
+		<defName>Bullet_127x55mm_EAC_Bioferrite</defName>
+		<label>12.7mm bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>10</damageAmountBase>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>17</amount>
+				</li>
+			</secondaryDamage>
+			<armorPenetrationSharp>21</armorPenetrationSharp>
+			<armorPenetrationBlunt>51.340</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_127x55mm_EAC_Bioferrite</defName>
+		<label>make 12.7x55mm cartridge (Bioferrite) cartridge x500</label>
+		<description>Craft 500 12.7x55mm cartridge (Bioferrite) cartridge.</description>
+		<jobString>Making 12.7x55mm cartridge (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>39</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>39</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>19</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Bioferrite</li>
+				<li>Uranium</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_127x55mm_EAC_Bioferrite>500</Ammo_127x55mm_EAC_Bioferrite>
+		</products>
+		<workAmount>14200</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="127x55mmBase">
+		<defName>Ammo_127x55mm_EAC_Silver</defName>
+		<label>127x55mm (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/SovietLarge/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_127x55mm_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base127x55mmBullet">
+		<defName>Bullet_127x55mm_EAC_Silver</defName>
+		<label>12.7mm bullet (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>26</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>51.340</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_127x55mm_EAC_Silver</defName>
+		<label>make 12.7x55mm (Consecrated) cartridge x500</label>
+		<description>Craft 500 12.7x55mm (Consecrated) cartridges.</description>
+		<jobString>Making 12.7x55mm (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>82</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_127x55mm_EAC_Silver>500</Ammo_127x55mm_EAC_Silver>
+		</products>
+		<workAmount>9840</workAmount>
+	</RecipeDef>
+</Defs>

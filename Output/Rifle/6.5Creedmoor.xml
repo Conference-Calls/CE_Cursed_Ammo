@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="65x48mmCreedmoorBase">
+		<defName>Ammo_65x48mmCreedmoor_EAC_Bioferrite</defName>
+		<label>6.5Creedmoor (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Battlerifle/EAC_Bioferrite</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance>
+		<cookOffProjectile>Bullet_65x48mmCreedmoor_EAC_Bioferrite</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base65x48mmCreedmoorBullet">
+		<defName>Bullet_65x48mmCreedmoor_EAC_Bioferrite</defName>
+		<label>6.5mm Creedmoor bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>20</armorPenetrationSharp>
+			<armorPenetrationBlunt>67.34</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>6</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_65x48mmCreedmoor_EAC_Bioferrite</defName>
+		<label>make 6.5mm Creedmoor (Bioferrite) cartridge x500</label>
+		<description>Craft 500 6.5mm Creedmoor (Bioferrite) cartridges.</description>
+		<jobString>Making 6.5mm Creedmoor (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>11</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>11</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Bioferrite</li>
+				<li>Uranium</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_65x48mmCreedmoor_EAC_Bioferrite>500</Ammo_65x48mmCreedmoor_EAC_Bioferrite>
+		</products>
+		<workAmount>3600</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="65x48mmCreedmoorBase">
+		<defName>Ammo_65x48mmCreedmoor_EAC_Silver</defName>
+		<label>6.5Creedmoor (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Battlerifle/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_65x48mmCreedmoor_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base65x48mmCreedmoorBullet">
+		<defName>Bullet_65x48mmCreedmoor_EAC_Silver</defName>
+		<label>6.5mm Creedmoor bullet (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>24</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>67.34</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_65x48mmCreedmoor_EAC_Silver</defName>
+		<label>make 6.5mm Creedmoor (Consecrated) cartridge x500</label>
+		<description>Craft 500 6.5mm Creedmoor (Consecrated) cartridges.</description>
+		<jobString>Making 6.5mm Creedmoor (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>24</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_65x48mmCreedmoor_EAC_Silver>500</Ammo_65x48mmCreedmoor_EAC_Silver>
+		</products>
+		<workAmount>2880</workAmount>
+	</RecipeDef>
+</Defs>

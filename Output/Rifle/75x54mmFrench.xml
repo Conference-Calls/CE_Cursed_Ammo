@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="75x54mmFrenchBase">
+		<defName>Ammo_75x54mmFrench_EAC_Bioferrite</defName>
+		<label>75x54mmFrench (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/EAC_Bioferrite</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance>
+		<cookOffProjectile>Bullet_75x54mmFrench_EAC_Bioferrite</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base75x54mmFrenchBullet">
+		<defName>Bullet_75x54mmFrench_EAC_Bioferrite</defName>
+		<label>7.5mm French bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>20</armorPenetrationSharp>
+			<armorPenetrationBlunt>60.52</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_75x54mmFrench_EAC_Bioferrite</defName>
+		<label>make 7.5x54mm French (Bioferrite) cartridge x500</label>
+		<description>Craft 500 7.5x54mm French (Bioferrite) cartridges.</description>
+		<jobString>Making 7.5x54mm French (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Bioferrite</li>
+				<li>Uranium</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_75x54mmFrench_EAC_Bioferrite>500</Ammo_75x54mmFrench_EAC_Bioferrite>
+		</products>
+		<workAmount>3800</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="75x54mmFrenchBase">
+		<defName>Ammo_75x54mmFrench_EAC_Silver</defName>
+		<label>75x54mmFrench (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_75x54mmFrench_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base75x54mmFrenchBullet">
+		<defName>Bullet_75x54mmFrench_EAC_Silver</defName>
+		<label>7.5mm French bullet (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>24</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>60.52</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_75x54mmFrench_EAC_Silver</defName>
+		<label>make 7.5x54mm French (Consecrated) cartridge x500</label>
+		<description>Craft 500 7.5x54mm French (Consecrated) cartridges.</description>
+		<jobString>Making 7.5x54mm French (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>26</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_75x54mmFrench_EAC_Silver>500</Ammo_75x54mmFrench_EAC_Silver>
+		</products>
+		<workAmount>3120</workAmount>
+	</RecipeDef>
+</Defs>

@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="792x57mmMauserBase">
+		<defName>Ammo_792x57mmMauser_EAC_Bioferrite</defName>
+		<label>7.92x57mmMauser (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/EAC_Bioferrite</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance>
+		<cookOffProjectile>Bullet_792x57mmMauser_EAC_Bioferrite</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base792x57mmMauserBullet">
+		<defName>Bullet_792x57mmMauser_EAC_Bioferrite</defName>
+		<label>7.92x57mm Mauser bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>22</armorPenetrationSharp>
+			<armorPenetrationBlunt>78.68</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>6</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_792x57mmMauser_EAC_Bioferrite</defName>
+		<label>make 7.92x57mm Mauser (Bioferrite) cartridge x500</label>
+		<description>Craft 500 7.92x57mm Mauser (Bioferrite) cartridges.</description>
+		<jobString>Making 7.92x57mm Mauser (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>13</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>13</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>7</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Bioferrite</li>
+				<li>Uranium</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_792x57mmMauser_EAC_Bioferrite>500</Ammo_792x57mmMauser_EAC_Bioferrite>
+		</products>
+		<workAmount>4200</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="792x57mmMauserBase">
+		<defName>Ammo_792x57mmMauser_EAC_Silver</defName>
+		<label>7.92x57mmMauser (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_792x57mmMauser_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base792x57mmMauserBullet">
+		<defName>Bullet_792x57mmMauser_EAC_Silver</defName>
+		<label>7.92mm Mauser bullet (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>26</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>78.68</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_792x57mmMauser_EAC_Silver</defName>
+		<label>make 7.92x57mm Mauser (Consecrated) cartridge x500</label>
+		<description>Craft 500 7.92x57mm Mauser (Consecrated) cartridges.</description>
+		<jobString>Making 7.92x57mm Mauser (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_792x57mmMauser_EAC_Silver>500</Ammo_792x57mmMauser_EAC_Silver>
+		</products>
+		<workAmount>3600</workAmount>
+	</RecipeDef>
+</Defs>

@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="485x49mmBase">
+		<defName>Ammo_485x49mm_EAC_Bioferrite</defName>
+		<label>485x49mm (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Battlerifle/EAC_Bioferrite</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance>
+		<cookOffProjectile>Bullet_485x49mm_EAC_Bioferrite</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base485x49mmBullet">
+		<defName>Bullet_485x49mm_EAC_Bioferrite</defName>
+		<label>4.85x49mm bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>6</damageAmountBase>
+			<armorPenetrationSharp>18</armorPenetrationSharp>
+			<armorPenetrationBlunt>32.06</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>3</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_485x49mm_EAC_Bioferrite</defName>
+		<label>make 4.85x49mm (Bioferrite) cartridge x500</label>
+		<description>Craft 500 4.85x49mm (Bioferrite) cartridges.</description>
+		<jobString>Making 4.85x49mm (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Bioferrite</li>
+				<li>Uranium</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_485x49mm_EAC_Bioferrite>500</Ammo_485x49mm_EAC_Bioferrite>
+		</products>
+		<workAmount>1600</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="485x49mmBase">
+		<defName>Ammo_485x49mm_EAC_Silver</defName>
+		<label>485x49mm (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Battlerifle/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_485x49mm_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base485x49mmBullet">
+		<defName>Bullet_485x49mm_EAC_Silver</defName>
+		<label>4.85x49mm cartridge (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>16</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>32.06</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_485x49mm_EAC_Silver</defName>
+		<label>make 4.85x49mm Cartridge (Consecrated) cartridge x500</label>
+		<description>Craft 500 4.85x49mm Cartridge (Consecrated) cartridges.</description>
+		<jobString>Making 4.85x49mm Cartridge (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_485x49mm_EAC_Silver>500</Ammo_485x49mm_EAC_Silver>
+		</products>
+		<workAmount>1440</workAmount>
+	</RecipeDef>
+</Defs>

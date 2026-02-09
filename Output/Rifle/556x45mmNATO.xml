@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="556x45mmNATOBase">
+		<defName>Ammo_556x45mmNATO_EAC_Bioferrite</defName>
+		<label>556x45mmNATO (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/EAC_Bioferrite</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance>
+		<cookOffProjectile>Bullet_556x45mmNATO_EAC_Bioferrite</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base556x45mmNATOBullet">
+		<defName>Bullet_556x45mmNATO_EAC_Bioferrite</defName>
+		<label>5.56mm NATO bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>7</damageAmountBase>
+			<armorPenetrationSharp>18</armorPenetrationSharp>
+			<armorPenetrationBlunt>34.18</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>3</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_556x45mmNATO_EAC_Bioferrite</defName>
+		<label>make 5.56x45mm NATO (Bioferrite) cartridge x500</label>
+		<description>Craft 500 5.56x45mm NATO (Bioferrite) cartridges.</description>
+		<jobString>Making 5.56x45mm NATO (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Bioferrite</li>
+				<li>Uranium</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_556x45mmNATO_EAC_Bioferrite>500</Ammo_556x45mmNATO_EAC_Bioferrite>
+		</products>
+		<workAmount>2200</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="556x45mmNATOBase">
+		<defName>Ammo_556x45mmNATO_EAC_Silver</defName>
+		<label>556x45mmNATO (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_556x45mmNATO_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base556x45mmNATOBullet">
+		<defName>Bullet_556x45mmNATO_EAC_Silver</defName>
+		<label>5.56mm NATO bullet (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>34.18</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_556x45mmNATO_EAC_Silver</defName>
+		<label>make 5.56x45mm NATO (Consecrated) cartridge x500</label>
+		<description>Craft 500 5.56x45mm NATO (Consecrated) cartridges.</description>
+		<jobString>Making 5.56x45mm NATO (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>14</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_556x45mmNATO_EAC_Silver>500</Ammo_556x45mmNATO_EAC_Silver>
+		</products>
+		<workAmount>1680</workAmount>
+	</RecipeDef>
+</Defs>

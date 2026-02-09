@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!-- Changes from base AP-I ammo -->
+	<!-- 1. Sharp penetration increased by 50%, rounded -->
+	<!-- 2. Crafting cost changed from steel to 40 - 40 - 20 split of Bioferrite, Uranium, and Steel, rounded to the nearest whole number. -->
+	<!-- 3. texPath changed to */EAC_Bioferrite -->
+	<!-- 4. Bullet damage reduced by 20%, rounded to the nearest whole number -->
 	<CombatExtended.AmmoCategoryDef>
 		<defName>EAC_Bioferrite</defName>
 		<label>bioferrite penetrator</label>
-		<labelShort>BFR</labelShort>
+		<labelShort>Bioferrite</labelShort>
 		<description>Depleted uranium core wrapped in a bioferrite jacket. Ignited bioferrite seeks its target with a hungry malevolence, propelling the core forward like a HEAT round.</description>
 	</CombatExtended.AmmoCategoryDef>
+
+	<!-- Changes from base AP ammo -->
+	<!-- 1. Sharp penetration increased to 999999 -->
+	<!-- 2. Crafting cost changed from Steel to Silver. 1 Shard is also added to the recipe cost -->
+	<!-- 3. texPath changed to */EAC_Silver -->
+	<!-- 4. Bullet damage doubled and converted to Disintegrate damage type -->
 	<CombatExtended.AmmoCategoryDef>
 		<defName>EAC_Silver</defName>
 		<label>consecrated silver</label>
-		<labelShort>C.Silver</labelShort>
+		<labelShort>Consecrated</labelShort>
 		<description>Shard-infused silver bullet, blessed with an unstable psychic resonance. Blooms into a localized entropy spike on impact, effectively degrading all manner of organized structures.</description>
 	</CombatExtended.AmmoCategoryDef>
 </Defs>

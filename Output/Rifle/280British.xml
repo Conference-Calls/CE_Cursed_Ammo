@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="280BritishBase">
+		<defName>Ammo_280British_EAC_Bioferrite</defName>
+		<label>280British (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Battlerifle/EAC_Bioferrite</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance>
+		<cookOffProjectile>Bullet_280British_EAC_Bioferrite</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base280BritishBullet">
+		<defName>Bullet_280British_EAC_Bioferrite</defName>
+		<label>.280 British bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetrationSharp>18</armorPenetrationSharp>
+			<armorPenetrationBlunt>54.76</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_280British_EAC_Bioferrite</defName>
+		<label>make .280 British (Bioferrite) cartridge x500</label>
+		<description>Craft 500 .280 British (Bioferrite) cartridges.</description>
+		<jobString>Making .280 British (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>11</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>11</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Bioferrite</li>
+				<li>Uranium</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_280British_EAC_Bioferrite>500</Ammo_280British_EAC_Bioferrite>
+		</products>
+		<workAmount>3600</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="280BritishBase">
+		<defName>Ammo_280British_EAC_Silver</defName>
+		<label>280British (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Battlerifle/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_280British_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base280BritishBullet">
+		<defName>Bullet_280British_EAC_Silver</defName>
+		<label>.280 British cartridge (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>22</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>54.76</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_280British_EAC_Silver</defName>
+		<label>make .280 British Cartridge (Consecrated) cartridge x500</label>
+		<description>Craft 500 .280 British Cartridge (Consecrated) cartridges.</description>
+		<jobString>Making .280 British Cartridge (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>24</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_280British_EAC_Silver>500</Ammo_280British_EAC_Silver>
+		</products>
+		<workAmount>2880</workAmount>
+	</RecipeDef>
+</Defs>

@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="50BeowulfBase">
+		<defName>Ammo_50Beowulf_EAC_Bioferrite</defName>
+		<label>50Beowulf (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/EAC_Bioferrite</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance>
+		<cookOffProjectile>Bullet_50Beowulf_EAC_Bioferrite</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base50BeowulfBullet">
+		<defName>Bullet_50Beowulf_EAC_Bioferrite</defName>
+		<label>.50 Beowulf bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetrationSharp>20</armorPenetrationSharp>
+			<armorPenetrationBlunt>63.28</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>9</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_50Beowulf_EAC_Bioferrite</defName>
+		<label>make .50 Beowulf (Bioferrite) cartridge x500</label>
+		<description>Craft 500 .50 Beowulf (Bioferrite) cartridges.</description>
+		<jobString>Making .50 Beowulf (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>17</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>17</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Bioferrite</li>
+				<li>Uranium</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_50Beowulf_EAC_Bioferrite>500</Ammo_50Beowulf_EAC_Bioferrite>
+		</products>
+		<workAmount>6000</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="50BeowulfBase">
+		<defName>Ammo_50Beowulf_EAC_Silver</defName>
+		<label>50Beowulf (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_50Beowulf_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base50BeowulfBullet">
+		<defName>Bullet_50Beowulf_EAC_Silver</defName>
+		<label>.50 Beowulf bullet (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>28</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>63.28</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_50Beowulf_EAC_Silver</defName>
+		<label>make .50 Beowulf (Consecrated) cartridge x500</label>
+		<description>Craft 500 .50 Beowulf (Consecrated) cartridges.</description>
+		<jobString>Making .50 Beowulf (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>36</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_50Beowulf_EAC_Silver>500</Ammo_50Beowulf_EAC_Silver>
+		</products>
+		<workAmount>4320</workAmount>
+	</RecipeDef>
+</Defs>

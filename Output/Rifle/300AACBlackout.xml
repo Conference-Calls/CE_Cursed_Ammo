@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="300AACBlackoutBase">
+		<defName>Ammo_300AACBlackout_EAC_Bioferrite</defName>
+		<label>300AACBlackout (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/EAC_Bioferrite</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance>
+		<cookOffProjectile>Bullet_300AACBlackout_EAC_Bioferrite</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base300AACBlackoutBullet">
+		<defName>Bullet_300AACBlackout_EAC_Bioferrite</defName>
+		<label>.300 AAC Blackout bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationSharp>16</armorPenetrationSharp>
+			<armorPenetrationBlunt>36.46</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_300AACBlackout_EAC_Bioferrite</defName>
+		<label>make .300 AAC Blackout (Bioferrite) cartridge x500</label>
+		<description>Craft 500 .300 AAC Blackout (Bioferrite) cartridges.</description>
+		<jobString>Making .300 AAC Blackout (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Bioferrite</li>
+				<li>Uranium</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_300AACBlackout_EAC_Bioferrite>500</Ammo_300AACBlackout_EAC_Bioferrite>
+		</products>
+		<workAmount>2200</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="300AACBlackoutBase">
+		<defName>Ammo_300AACBlackout_EAC_Silver</defName>
+		<label>300AACBlackout (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_300AACBlackout_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base300AACBlackoutBullet">
+		<defName>Bullet_300AACBlackout_EAC_Silver</defName>
+		<label>.300 AAC Blackout bullet (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>20</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>36.46</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_300AACBlackout_EAC_Silver</defName>
+		<label>make .300 AAC Blackout (Consecrated) cartridge x500</label>
+		<description>Craft 500 .300 AAC Blackout (Consecrated) cartridges.</description>
+		<jobString>Making .300 AAC Blackout (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>14</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_300AACBlackout_EAC_Silver>500</Ammo_300AACBlackout_EAC_Silver>
+		</products>
+		<workAmount>1680</workAmount>
+	</RecipeDef>
+</Defs>

@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_127x55mm"]/ammoTypes</xpath>
+		<value>
+			<Ammo_127x55mm_EAC_Bioferrite>Bullet_127x55mm_EAC_Bioferrite</Ammo_127x55mm_EAC_Bioferrite>
+			<Ammo_127x55mm_EAC_Silver>Bullet_127x55mm_EAC_Silver</Ammo_127x55mm_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_17HMR"]/ammoTypes</xpath>
+		<value>
+			<Ammo_17HMR_EAC_Bioferrite>Bullet_17HMR_EAC_Bioferrite</Ammo_17HMR_EAC_Bioferrite>
+			<Ammo_17HMR_EAC_Silver>Bullet_17HMR_EAC_Silver</Ammo_17HMR_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_22Hornet"]/ammoTypes</xpath>
+		<value>
+			<Ammo_22Hornet_EAC_Bioferrite>Bullet_22Hornet_EAC_Bioferrite</Ammo_22Hornet_EAC_Bioferrite>
+			<Ammo_22Hornet_EAC_Silver>Bullet_22Hornet_EAC_Silver</Ammo_22Hornet_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_22WMR"]/ammoTypes</xpath>
+		<value>
+			<Ammo_22WMR_EAC_Bioferrite>Bullet_22WMR_EAC_Bioferrite</Ammo_22WMR_EAC_Bioferrite>
+			<Ammo_22WMR_EAC_Silver>Bullet_22WMR_EAC_Silver</Ammo_22WMR_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_243Winchester"]/ammoTypes</xpath>
+		<value>
+			<Ammo_243Winchester_EAC_Bioferrite>Bullet_243Winchester_EAC_Bioferrite</Ammo_243Winchester_EAC_Bioferrite>
+			<Ammo_243Winchester_EAC_Silver>Bullet_243Winchester_EAC_Silver</Ammo_243Winchester_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_277Fury"]/ammoTypes</xpath>
+		<value>
+			<Ammo_277Fury_EAC_Bioferrite>Bullet_277Fury_EAC_Bioferrite</Ammo_277Fury_EAC_Bioferrite>
+			<Ammo_277Fury_EAC_Silver>Bullet_277Fury_EAC_Silver</Ammo_277Fury_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_280British"]/ammoTypes</xpath>
+		<value>
+			<Ammo_280British_EAC_Bioferrite>Bullet_280British_EAC_Bioferrite</Ammo_280British_EAC_Bioferrite>
+			<Ammo_280British_EAC_Silver>Bullet_280British_EAC_Silver</Ammo_280British_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_3006Springfield"]/ammoTypes</xpath>
+		<value>
+			<Ammo_3006Springfield_EAC_Bioferrite>Bullet_3006Springfield_EAC_Bioferrite</Ammo_3006Springfield_EAC_Bioferrite>
+			<Ammo_3006Springfield_EAC_Silver>Bullet_3006Springfield_EAC_Silver</Ammo_3006Springfield_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_300AACBlackout"]/ammoTypes</xpath>
+		<value>
+			<Ammo_300AACBlackout_EAC_Bioferrite>Bullet_300AACBlackout_EAC_Bioferrite</Ammo_300AACBlackout_EAC_Bioferrite>
+			<Ammo_300AACBlackout_EAC_Silver>Bullet_300AACBlackout_EAC_Silver</Ammo_300AACBlackout_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_3030Winchester"]/ammoTypes</xpath>
+		<value>
+			<Ammo_3030Winchester_EAC_Bioferrite>Bullet_3030Winchester_EAC_Bioferrite</Ammo_3030Winchester_EAC_Bioferrite>
+			<Ammo_3030Winchester_EAC_Silver>Bullet_3030Winchester_EAC_Silver</Ammo_3030Winchester_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_303British"]/ammoTypes</xpath>
+		<value>
+			<Ammo_303British_EAC_Bioferrite>Bullet_303British_EAC_Bioferrite</Ammo_303British_EAC_Bioferrite>
+			<Ammo_303British_EAC_Silver>Bullet_303British_EAC_Silver</Ammo_303British_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_30Carbine"]/ammoTypes</xpath>
+		<value>
+			<Ammo_30Carbine_EAC_Bioferrite>Bullet_30Carbine_EAC_Bioferrite</Ammo_30Carbine_EAC_Bioferrite>
+			<Ammo_30Carbine_EAC_Silver>Bullet_30Carbine_EAC_Silver</Ammo_30Carbine_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_3855Winchester"]/ammoTypes</xpath>
+		<value>
+			<Ammo_3855Winchester_EAC_Bioferrite>Bullet_3855Winchester_EAC_Bioferrite</Ammo_3855Winchester_EAC_Bioferrite>
+			<Ammo_3855Winchester_EAC_Silver>Bullet_3855Winchester_EAC_Silver</Ammo_3855Winchester_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_44-40Winchester"]/ammoTypes</xpath>
+		<value>
+			<Ammo_44-40Winchester_EAC_Bioferrite>Bullet_44-40Winchester_EAC_Bioferrite</Ammo_44-40Winchester_EAC_Bioferrite>
+			<Ammo_44-40Winchester_EAC_Silver>Bullet_44-40Winchester_EAC_Silver</Ammo_44-40Winchester_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_4570Gov"]/ammoTypes</xpath>
+		<value>
+			<Ammo_4570Gov_EAC_Bioferrite>Bullet_4570Gov_EAC_Bioferrite</Ammo_4570Gov_EAC_Bioferrite>
+			<Ammo_4570Gov_EAC_Silver>Bullet_4570Gov_EAC_Silver</Ammo_4570Gov_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_458SOCOM"]/ammoTypes</xpath>
+		<value>
+			<Ammo_458SOCOM_EAC_Bioferrite>Bullet_458SOCOM_EAC_Bioferrite</Ammo_458SOCOM_EAC_Bioferrite>
+			<Ammo_458SOCOM_EAC_Silver>Bullet_458SOCOM_EAC_Silver</Ammo_458SOCOM_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_473x33mmCaseless"]/ammoTypes</xpath>
+		<value>
+			<Ammo_473x33mmCaseless_EAC_Bioferrite>Bullet_473x33mmCaseless_EAC_Bioferrite</Ammo_473x33mmCaseless_EAC_Bioferrite>
+			<Ammo_473x33mmCaseless_EAC_Silver>Bullet_473x33mmCaseless_EAC_Silver</Ammo_473x33mmCaseless_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_485x49mm"]/ammoTypes</xpath>
+		<value>
+			<Ammo_485x49mm_EAC_Bioferrite>Bullet_485x49mm_EAC_Bioferrite</Ammo_485x49mm_EAC_Bioferrite>
+			<Ammo_485x49mm_EAC_Silver>Bullet_485x49mm_EAC_Silver</Ammo_485x49mm_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_50Beowulf"]/ammoTypes</xpath>
+		<value>
+			<Ammo_50Beowulf_EAC_Bioferrite>Bullet_50Beowulf_EAC_Bioferrite</Ammo_50Beowulf_EAC_Bioferrite>
+			<Ammo_50Beowulf_EAC_Silver>Bullet_50Beowulf_EAC_Silver</Ammo_50Beowulf_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_545x39mmSoviet"]/ammoTypes</xpath>
+		<value>
+			<Ammo_545x39mmSoviet_EAC_Bioferrite>Bullet_545x39mmSoviet_EAC_Bioferrite</Ammo_545x39mmSoviet_EAC_Bioferrite>
+			<Ammo_545x39mmSoviet_EAC_Silver>Bullet_545x39mmSoviet_EAC_Silver</Ammo_545x39mmSoviet_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_556x45mmNATO"]/ammoTypes</xpath>
+		<value>
+			<Ammo_556x45mmNATO_EAC_Bioferrite>Bullet_556x45mmNATO_EAC_Bioferrite</Ammo_556x45mmNATO_EAC_Bioferrite>
+			<Ammo_556x45mmNATO_EAC_Silver>Bullet_556x45mmNATO_EAC_Silver</Ammo_556x45mmNATO_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_5656Spencer"]/ammoTypes</xpath>
+		<value>
+			<Ammo_5656Spencer_EAC_Bioferrite>Bullet_5656Spencer_EAC_Bioferrite</Ammo_5656Spencer_EAC_Bioferrite>
+			<Ammo_5656Spencer_EAC_Silver>Bullet_5656Spencer_EAC_Silver</Ammo_5656Spencer_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_58x42mmDBP10"]/ammoTypes</xpath>
+		<value>
+			<Ammo_58x42mmDBP10_EAC_Bioferrite>Bullet_58x42mmDBP10_EAC_Bioferrite</Ammo_58x42mmDBP10_EAC_Bioferrite>
+			<Ammo_58x42mmDBP10_EAC_Silver>Bullet_58x42mmDBP10_EAC_Silver</Ammo_58x42mmDBP10_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_65x48mmCreedmoor"]/ammoTypes</xpath>
+		<value>
+			<Ammo_65x48mmCreedmoor_EAC_Bioferrite>Bullet_65x48mmCreedmoor_EAC_Bioferrite</Ammo_65x48mmCreedmoor_EAC_Bioferrite>
+			<Ammo_65x48mmCreedmoor_EAC_Silver>Bullet_65x48mmCreedmoor_EAC_Silver</Ammo_65x48mmCreedmoor_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_65x50mmSRArisaka"]/ammoTypes</xpath>
+		<value>
+			<Ammo_65x50mmSRArisaka_EAC_Bioferrite>Bullet_65x50mmSRArisaka_EAC_Bioferrite</Ammo_65x50mmSRArisaka_EAC_Bioferrite>
+			<Ammo_65x50mmSRArisaka_EAC_Silver>Bullet_65x50mmSRArisaka_EAC_Silver</Ammo_65x50mmSRArisaka_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_65x52mmCarcano"]/ammoTypes</xpath>
+		<value>
+			<Ammo_65x52mmCarcano_EAC_Bioferrite>Bullet_65x52mmCarcano_EAC_Bioferrite</Ammo_65x52mmCarcano_EAC_Bioferrite>
+			<Ammo_65x52mmCarcano_EAC_Silver>Bullet_65x52mmCarcano_EAC_Silver</Ammo_65x52mmCarcano_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_75x54mmFrench"]/ammoTypes</xpath>
+		<value>
+			<Ammo_75x54mmFrench_EAC_Bioferrite>Bullet_75x54mmFrench_EAC_Bioferrite</Ammo_75x54mmFrench_EAC_Bioferrite>
+			<Ammo_75x54mmFrench_EAC_Silver>Bullet_75x54mmFrench_EAC_Silver</Ammo_75x54mmFrench_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_762x39mmSoviet"]/ammoTypes</xpath>
+		<value>
+			<Ammo_762x39mmSoviet_EAC_Bioferrite>Bullet_762x39mmSoviet_EAC_Bioferrite</Ammo_762x39mmSoviet_EAC_Bioferrite>
+			<Ammo_762x39mmSoviet_EAC_Silver>Bullet_762x39mmSoviet_EAC_Silver</Ammo_762x39mmSoviet_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_762x51mmNATO"]/ammoTypes</xpath>
+		<value>
+			<Ammo_762x51mmNATO_EAC_Bioferrite>Bullet_762x51mmNATO_EAC_Bioferrite</Ammo_762x51mmNATO_EAC_Bioferrite>
+			<Ammo_762x51mmNATO_EAC_Silver>Bullet_762x51mmNATO_EAC_Silver</Ammo_762x51mmNATO_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_762x54mmR"]/ammoTypes</xpath>
+		<value>
+			<Ammo_762x54mmR_EAC_Bioferrite>Bullet_762x54mmR_EAC_Bioferrite</Ammo_762x54mmR_EAC_Bioferrite>
+			<Ammo_762x54mmR_EAC_Silver>Bullet_762x54mmR_EAC_Silver</Ammo_762x54mmR_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_77x58mmArisaka"]/ammoTypes</xpath>
+		<value>
+			<Ammo_77x58mmArisaka_EAC_Bioferrite>Bullet_77x58mmArisaka_EAC_Bioferrite</Ammo_77x58mmArisaka_EAC_Bioferrite>
+			<Ammo_77x58mmArisaka_EAC_Silver>Bullet_77x58mmArisaka_EAC_Silver</Ammo_77x58mmArisaka_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_792x33mmKurz"]/ammoTypes</xpath>
+		<value>
+			<Ammo_792x33mmKurz_EAC_Bioferrite>Bullet_792x33mmKurz_EAC_Bioferrite</Ammo_792x33mmKurz_EAC_Bioferrite>
+			<Ammo_792x33mmKurz_EAC_Silver>Bullet_792x33mmKurz_EAC_Silver</Ammo_792x33mmKurz_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_792x57mmMauser"]/ammoTypes</xpath>
+		<value>
+			<Ammo_792x57mmMauser_EAC_Bioferrite>Bullet_792x57mmMauser_EAC_Bioferrite</Ammo_792x57mmMauser_EAC_Bioferrite>
+			<Ammo_792x57mmMauser_EAC_Silver>Bullet_792x57mmMauser_EAC_Silver</Ammo_792x57mmMauser_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_86x43mmBlackout"]/ammoTypes</xpath>
+		<value>
+			<Ammo_86x43mmBlackout_EAC_Bioferrite>Bullet_86x43mmBlackout_EAC_Bioferrite</Ammo_86x43mmBlackout_EAC_Bioferrite>
+			<Ammo_86x43mmBlackout_EAC_Silver>Bullet_86x43mmBlackout_EAC_Silver</Ammo_86x43mmBlackout_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_8x50mmRLebel"]/ammoTypes</xpath>
+		<value>
+			<Ammo_8x50mmRLebel_EAC_Bioferrite>Bullet_8x50mmRLebel_EAC_Bioferrite</Ammo_8x50mmRLebel_EAC_Bioferrite>
+			<Ammo_8x50mmRLebel_EAC_Silver>Bullet_8x50mmRLebel_EAC_Silver</Ammo_8x50mmRLebel_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_8x50mmRMannlicher"]/ammoTypes</xpath>
+		<value>
+			<Ammo_8x50mmRMannlicher_EAC_Bioferrite>Bullet_8x50mmRMannlicher_EAC_Bioferrite</Ammo_8x50mmRMannlicher_EAC_Bioferrite>
+			<Ammo_8x50mmRMannlicher_EAC_Silver>Bullet_8x50mmRMannlicher_EAC_Silver</Ammo_8x50mmRMannlicher_EAC_Silver>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_9x39mmSoviet"]/ammoTypes</xpath>
+		<value>
+			<Ammo_9x39mmSoviet_EAC_Bioferrite>Bullet_9x39mmSoviet_EAC_Bioferrite</Ammo_9x39mmSoviet_EAC_Bioferrite>
+			<Ammo_9x39mmSoviet_EAC_Silver>Bullet_9x39mmSoviet_EAC_Silver</Ammo_9x39mmSoviet_EAC_Silver>
+		</value>
+	</Operation>
+</Patch>

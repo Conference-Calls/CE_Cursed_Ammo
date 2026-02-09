@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="30CarbineBase">
+		<defName>Ammo_30Carbine_EAC_Bioferrite</defName>
+		<label>30Carbine (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/EAC_Bioferrite</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance>
+		<cookOffProjectile>Bullet_30Carbine_EAC_Bioferrite</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base30CarbineBullet">
+		<defName>Bullet_30Carbine_EAC_Bioferrite</defName>
+		<label>.30 Carbine bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>7</damageAmountBase>
+			<armorPenetrationSharp>15</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.74</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_30Carbine_EAC_Bioferrite</defName>
+		<label>make .30 Carbine (Bioferrite) cartridge x500</label>
+		<description>Craft 500 .30 Carbine (Bioferrite) cartridges.</description>
+		<jobString>Making .30 Carbine (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Bioferrite</li>
+				<li>Uranium</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_30Carbine_EAC_Bioferrite>500</Ammo_30Carbine_EAC_Bioferrite>
+		</products>
+		<workAmount>2200</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="30CarbineBase">
+		<defName>Ammo_30Carbine_EAC_Silver</defName>
+		<label>30Carbine (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Clip/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_30Carbine_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base30CarbineBullet">
+		<defName>Bullet_30Carbine_EAC_Silver</defName>
+		<label>.30 Carbine bullet (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.74</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_30Carbine_EAC_Silver</defName>
+		<label>make .30 Carbine (Consecrated) cartridge x500</label>
+		<description>Craft 500 .30 Carbine (Consecrated) cartridges.</description>
+		<jobString>Making .30 Carbine (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>14</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_30Carbine_EAC_Silver>500</Ammo_30Carbine_EAC_Silver>
+		</products>
+		<workAmount>1680</workAmount>
+	</RecipeDef>
+</Defs>

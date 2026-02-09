@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="58x42mmDBP10Base">
+		<defName>Ammo_58x42mmDBP10_EAC_Bioferrite</defName>
+		<label>58x42mmDBP10 (Bioferrite)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Soviet/EAC_Bioferrite</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance>
+		<cookOffProjectile>Bullet_58x42mmDBP10_EAC_Bioferrite</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base58x42mmDBP10Bullet">
+		<defName>Bullet_58x42mmDBP10_EAC_Bioferrite</defName>
+		<label>5.8mm DBP10 bullet (Bioferrite)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>7</damageAmountBase>
+			<armorPenetrationSharp>18</armorPenetrationSharp>
+			<armorPenetrationBlunt>35.9</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>3</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_58x42mmDBP10_EAC_Bioferrite</defName>
+		<label>make 5.8x42mm DBP10 (Bioferrite) cartridge x500</label>
+		<description>Craft 500 5.8x42mm DBP10 (Bioferrite) cartridges.</description>
+		<jobString>Making 5.8x42mm DBP10 (Bioferrite) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Bioferrite</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Bioferrite</li>
+				<li>Uranium</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_58x42mmDBP10_EAC_Bioferrite>500</Ammo_58x42mmDBP10_EAC_Bioferrite>
+		</products>
+		<workAmount>2600</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="58x42mmDBP10Base">
+		<defName>Ammo_58x42mmDBP10_EAC_Silver</defName>
+		<label>58x42mmDBP10 (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Soviet/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_58x42mmDBP10_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base58x42mmDBP10Bullet">
+		<defName>Bullet_58x42mmDBP10_EAC_Silver</defName>
+		<label>5.8mm DBP10 bullet (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>35.9</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_58x42mmDBP10_EAC_Silver</defName>
+		<label>make 5.8x42mm DBP10 (Consecrated) cartridge x500</label>
+		<description>Craft 500 5.8x42mm DBP10 (Consecrated) cartridges.</description>
+		<jobString>Making 5.8x42mm DBP10 (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>18</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_58x42mmDBP10_EAC_Silver>500</Ammo_58x42mmDBP10_EAC_Silver>
+		</products>
+		<workAmount>2160</workAmount>
+	</RecipeDef>
+</Defs>

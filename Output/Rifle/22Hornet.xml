@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="22HornetBase">
+		<defName>Ammo_22Hornet_EAC_Silver</defName>
+		<label>22Hornet (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Pistol/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_22Hornet_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base22HornetBullet">
+		<defName>Bullet_22Hornet_EAC_Silver</defName>
+		<label>.22 Hornet bullet (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>14</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>20.09</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_22Hornet_EAC_Silver</defName>
+		<label>make .22 Hornet (Consecrated) cartridge x500</label>
+		<description>Craft 500 .22 Hornet (Consecrated) cartridges.</description>
+		<jobString>Making .22 Hornet (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_22Hornet_EAC_Silver>500</Ammo_22Hornet_EAC_Silver>
+		</products>
+		<workAmount>960</workAmount>
+	</RecipeDef>
+</Defs>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="17HMRBase">
+		<defName>Ammo_17HMR_EAC_Silver</defName>
+		<label>17HMR (Consecrated)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Pistol/EAC_Silver</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>EAC_Silver</ammoClass>
+		<cookOffProjectile>Bullet_17HMR_EAC_Silver</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="Base17HMRBullet">
+		<defName>Bullet_17HMR_EAC_Silver</defName>
+		<label>.17 HMR bullet (Consecrated)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<armorPenetrationBlunt>6.44</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_17HMR_EAC_Silver</defName>
+		<label>make .17 HMR (Consecrated) cartridge x500</label>
+		<description>Craft 500 .17 HMR (Consecrated) cartridges.</description>
+		<jobString>Making .17 HMR (Consecrated) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Shard</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>Shard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_17HMR_EAC_Silver>500</Ammo_17HMR_EAC_Silver>
+		</products>
+		<workAmount>720</workAmount>
+	</RecipeDef>
+</Defs>
