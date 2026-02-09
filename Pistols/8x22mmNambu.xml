@@ -30,19 +30,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_8x22mmNambu_HP</cookOffProjectile>
 	</ThingDef>
-	<ThingDef Name="Base8x22mmNambuBullet" ParentName="BaseBulletCE" Abstract="true">
-		<graphicData>
-			<texPath>Things/Projectile/Bullet_Small</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>Bullet</damageDef>
-			<speed>71</speed>
-			<dropsCasings>true</dropsCasings>
-			<casingMoteDefname>Fleck_PistolAmmoCasings</casingMoteDefname>
-			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
-		</projectile>
-	</ThingDef>
 	<ThingDef ParentName="Base8x22mmNambuBullet">
 		<defName>Bullet_8x22mmNambu_FMJ</defName>
 		<label>8mm Nambu bullet (FMJ)</label>

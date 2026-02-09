@@ -29,19 +29,6 @@
 		</graphicData>
 		<ammoClass>HollowPoint</ammoClass>
 	</ThingDef>
-	<ThingDef Name="Base38ACPBullet" ParentName="BaseBulletCE" Abstract="true">
-		<graphicData>
-			<texPath>Things/Projectile/Bullet_Small</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>Bullet</damageDef>
-			<speed>81</speed>
-			<dropsCasings>true</dropsCasings>
-			<casingMoteDefname>Fleck_PistolAmmoCasings</casingMoteDefname>
-			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
-		</projectile>
-	</ThingDef>
 	<ThingDef ParentName="Base38ACPBullet">
 		<defName>Bullet_38ACP_FMJ</defName>
 		<label>.38 ACP bullet (FMJ)</label>

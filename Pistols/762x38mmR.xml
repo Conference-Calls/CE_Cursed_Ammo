@@ -30,19 +30,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_762x38mmR_HP</cookOffProjectile>
 	</ThingDef>
-	<ThingDef Name="Base762x38mmRBullet" ParentName="BaseBulletCE" Abstract="true">
-		<graphicData>
-			<texPath>Things/Projectile/Bullet_Small</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>Bullet</damageDef>
-			<speed>77</speed>
-			<dropsCasings>true</dropsCasings>
-			<casingMoteDefname>Fleck_PistolAmmoCasings</casingMoteDefname>
-			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
-		</projectile>
-	</ThingDef>
 	<ThingDef ParentName="Base762x38mmRBullet">
 		<defName>Bullet_762x38mmR_FMJ</defName>
 		<label>7.62mmR pistol bullet (FMJ)</label>
