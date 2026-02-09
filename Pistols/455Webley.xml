@@ -1,28 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo455Webley</defName>
-		<label>.455 Webley</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_455Webley</defName>
-		<label>.455 Webley</label>
-		<ammoTypes>
-			<Ammo_455Webley_FMJ>Bullet_455Webley_FMJ</Ammo_455Webley_FMJ>
-			<Ammo_455Webley_AP>Bullet_455Webley_AP</Ammo_455Webley_AP>
-			<Ammo_455Webley_HP>Bullet_455Webley_HP</Ammo_455Webley_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="455WebleyBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>Low-velocity handgun cartridge most commonly used in top break revolvers.</description>
 		<statBases>
@@ -37,7 +14,6 @@
 			<li>Ammo455Webley</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="455WebleyBase">
 		<defName>Ammo_455Webley_FMJ</defName>
 		<label>.455 Webley (FMJ)</label>
@@ -48,7 +24,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_455Webley_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="455WebleyBase">
 		<defName>Ammo_455Webley_AP</defName>
 		<label>.455 Webley (AP)</label>
@@ -59,7 +34,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_455Webley_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="455WebleyBase">
 		<defName>Ammo_455Webley_HP</defName>
 		<label>.455 Webley (HP)</label>
@@ -70,9 +44,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_455Webley_HP</cookOffProjectile>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base455WebleyBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -86,7 +57,6 @@
 			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base455WebleyBullet">
 		<defName>Bullet_455Webley_FMJ</defName>
 		<label>.455 Webley bullet (FMJ)</label>
@@ -96,7 +66,6 @@
 			<armorPenetrationBlunt>5.5</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base455WebleyBullet">
 		<defName>Bullet_455Webley_AP</defName>
 		<label>.455 Webley bullet (AP)</label>
@@ -106,7 +75,6 @@
 			<armorPenetrationBlunt>5.5</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base455WebleyBullet">
 		<defName>Bullet_455Webley_HP</defName>
 		<label>.455 Webley bullet (HP)</label>
@@ -116,9 +84,6 @@
 			<armorPenetrationBlunt>5.5</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_455Webley_FMJ</defName>
 		<label>make .455 Webley (FMJ) cartridge x500</label>
@@ -144,7 +109,6 @@
 		</products>
 		<workAmount>2600</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_455Webley_AP</defName>
 		<label>make .455 Webley (AP) cartridge x500</label>
@@ -170,7 +134,6 @@
 		</products>
 		<workAmount>3120</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_455Webley_HP</defName>
 		<label>make .455 Webley (HP) cartridge x500</label>
@@ -196,5 +159,4 @@
 		</products>
 		<workAmount>2600</workAmount>
 	</RecipeDef>
-
 </Defs>

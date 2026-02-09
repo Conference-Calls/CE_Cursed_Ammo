@@ -1,28 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo46x30mm</defName>
-		<label>4.6x30mm</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_46x30mm</defName>
-		<label>4.6x30mm</label>
-		<ammoTypes>
-			<Ammo_46x30mm_FMJ>Bullet_46x30mm_FMJ</Ammo_46x30mm_FMJ>
-			<Ammo_46x30mm_AP>Bullet_46x30mm_AP</Ammo_46x30mm_AP>
-			<Ammo_46x30mm_HP>Bullet_46x30mm_HP</Ammo_46x30mm_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="46x30mmBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>This high-velocity handgun cartridge was specifically designed for military personnel to defeat body armor.</description>
 		<statBases>
@@ -37,7 +14,6 @@
 			<li>Ammo46x30mm</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="46x30mmBase">
 		<defName>Ammo_46x30mm_FMJ</defName>
 		<label>4.6x30mm (FMJ)</label>
@@ -48,7 +24,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_46x30mm_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="46x30mmBase">
 		<defName>Ammo_46x30mm_AP</defName>
 		<label>4.6x30mm (AP)</label>
@@ -59,7 +34,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_46x30mm_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="46x30mmBase">
 		<defName>Ammo_46x30mm_HP</defName>
 		<label>4.6x30mm (HP)</label>
@@ -70,9 +44,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_46x30mm_HP</cookOffProjectile>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base46x30mmBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -86,7 +57,6 @@
 			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base46x30mmBullet">
 		<defName>Bullet_46x30mm_FMJ</defName>
 		<label>4.6x30mm bullet (FMJ)</label>
@@ -96,7 +66,6 @@
 			<armorPenetrationBlunt>9.72</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base46x30mmBullet">
 		<defName>Bullet_46x30mm_AP</defName>
 		<label>4.6x30mm bullet (AP)</label>
@@ -106,7 +75,6 @@
 			<armorPenetrationBlunt>9.72</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base46x30mmBullet">
 		<defName>Bullet_46x30mm_HP</defName>
 		<label>4.6x30mm bullet (HP)</label>
@@ -116,9 +84,6 @@
 			<armorPenetrationBlunt>9.72</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_46x30mm_FMJ</defName>
 		<label>make 4.6x30mm (FMJ) cartridge x500</label>
@@ -144,7 +109,6 @@
 		</products>
 		<workAmount>800</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_46x30mm_AP</defName>
 		<label>make 4.6x30mm (AP) cartridge x500</label>
@@ -170,7 +134,6 @@
 		</products>
 		<workAmount>960</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_46x30mm_HP</defName>
 		<label>make 4.6x30mm (HP) cartridge x500</label>
@@ -196,5 +159,4 @@
 		</products>
 		<workAmount>800</workAmount>
 	</RecipeDef>
-
 </Defs>

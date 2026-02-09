@@ -1,43 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo45ACP</defName>
-		<label>.45 ACP</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_45ACP</defName>
-		<label>.45 ACP</label>
-		<ammoTypes>
-			<Ammo_45ACP_FMJ>Bullet_45ACP_FMJ</Ammo_45ACP_FMJ>
-			<Ammo_45ACP_AP>Bullet_45ACP_AP</Ammo_45ACP_AP>
-			<Ammo_45ACP_HP>Bullet_45ACP_HP</Ammo_45ACP_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_45ACP410Bore_SB</defName>
-		<label>.45 ACP/.410 bore</label>
-		<ammoTypes>
-			<Ammo_45ACP_FMJ>Bullet_45ACP_FMJ</Ammo_45ACP_FMJ>
-			<Ammo_45ACP_AP>Bullet_45ACP_AP</Ammo_45ACP_AP>
-			<Ammo_45ACP_HP>Bullet_45ACP_HP</Ammo_45ACP_HP>
-			<Ammo_410Bore_Buck>Bullet_410Bore_Buck_SB</Ammo_410Bore_Buck>
-			<Ammo_410Bore_Slug>Bullet_410Bore_Slug_SB</Ammo_410Bore_Slug>
-			<Ammo_410Bore_Beanbag>Bullet_410Bore_Beanbag_SB</Ammo_410Bore_Beanbag>
-			<Ammo_410Bore_ElectroSlug>Bullet_410Bore_ElectroSlug_SB</Ammo_410Bore_ElectroSlug>
-		</ammoTypes>
-		<similarTo>AmmoSet_RevolverShotgun</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="45ACPBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>Pistol cartridge favoured for its above average stopping power.</description>
 		<statBases>
@@ -47,13 +9,12 @@
 		<tradeTags>
 			<li>CE_AutoEnableTrade</li>
 			<li>CE_AutoEnableCrafting</li>
-    		<li>CE_40K_Ammo</li>
+			<li>CE_40K_Ammo</li>
 		</tradeTags>
 		<thingCategories>
 			<li>Ammo45ACP</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="45ACPBase">
 		<defName>Ammo_45ACP_FMJ</defName>
 		<label>.45 ACP (FMJ)</label>
@@ -64,7 +25,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_45ACP_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="45ACPBase">
 		<defName>Ammo_45ACP_AP</defName>
 		<label>.45 ACP (AP)</label>
@@ -75,7 +35,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_45ACP_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="45ACPBase">
 		<defName>Ammo_45ACP_HP</defName>
 		<label>.45 ACP (HP)</label>
@@ -86,9 +45,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_45ACP_HP</cookOffProjectile>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base45ACPBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -103,7 +59,6 @@
 			<genericLabelOverride>pistol</genericLabelOverride>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base45ACPBullet">
 		<defName>Bullet_45ACP_FMJ</defName>
 		<label>.45 ACP bullet (FMJ)</label>
@@ -113,7 +68,6 @@
 			<armorPenetrationBlunt>10.860</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base45ACPBullet">
 		<defName>Bullet_45ACP_AP</defName>
 		<label>.45 ACP bullet (AP)</label>
@@ -123,7 +77,6 @@
 			<armorPenetrationBlunt>10.860</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base45ACPBullet">
 		<defName>Bullet_45ACP_HP</defName>
 		<label>.45 ACP bullet (HP)</label>
@@ -133,9 +86,6 @@
 			<armorPenetrationBlunt>10.860</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_45ACP_FMJ</defName>
 		<label>make .45 ACP (FMJ) cartridge x500</label>
@@ -161,7 +111,6 @@
 		</products>
 		<workAmount>2200</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_45ACP_AP</defName>
 		<label>make .45 ACP (AP) cartridge x500</label>
@@ -187,7 +136,6 @@
 		</products>
 		<workAmount>2640</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_45ACP_HP</defName>
 		<label>make .45 ACP (HP) cartridge x500</label>
@@ -213,5 +161,4 @@
 		</products>
 		<workAmount>2200</workAmount>
 	</RecipeDef>
-
 </Defs>

@@ -1,49 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo454Casull</defName>
-		<label>.454 Casull</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_454Casull</defName>
-		<label>.454 Casull/.45 Colt</label>
-		<ammoTypes>
-			<Ammo_454Casull_FMJ>Bullet_454Casull_FMJ</Ammo_454Casull_FMJ>
-			<Ammo_454Casull_AP>Bullet_454Casull_AP</Ammo_454Casull_AP>
-			<Ammo_454Casull_HP>Bullet_454Casull_HP</Ammo_454Casull_HP>
-			<Ammo_45Colt_FMJ>Bullet_45Colt_FMJ</Ammo_45Colt_FMJ>
-			<Ammo_45Colt_AP>Bullet_45Colt_AP</Ammo_45Colt_AP>
-			<Ammo_45Colt_HP>Bullet_45Colt_HP</Ammo_45Colt_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_PistolMagnum</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_454Casull410Bore</defName>
-		<label>.454 Casull/.45 Colt/.410 bore</label>
-		<ammoTypes>
-			<Ammo_454Casull_FMJ>Bullet_454Casull_FMJ</Ammo_454Casull_FMJ>
-			<Ammo_454Casull_AP>Bullet_454Casull_AP</Ammo_454Casull_AP>
-			<Ammo_454Casull_HP>Bullet_454Casull_HP</Ammo_454Casull_HP>
-			<Ammo_45Colt_FMJ>Bullet_45Colt_FMJ</Ammo_45Colt_FMJ>
-			<Ammo_45Colt_AP>Bullet_45Colt_AP</Ammo_45Colt_AP>
-			<Ammo_45Colt_HP>Bullet_45Colt_HP</Ammo_45Colt_HP>
-			<Ammo_410Bore_Buck>Bullet_410Bore_Buck_SB</Ammo_410Bore_Buck>
-			<Ammo_410Bore_Slug>Bullet_410Bore_Slug_SB</Ammo_410Bore_Slug>
-			<Ammo_410Bore_Beanbag>Bullet_410Bore_Beanbag_SB</Ammo_410Bore_Beanbag>
-			<Ammo_410Bore_ElectroSlug>Bullet_410Bore_ElectroSlug_SB</Ammo_410Bore_ElectroSlug>
-		</ammoTypes>
-		<similarTo>AmmoSet_RevolverShotgun</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="454CasullBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>A lengthened and reinforced .45 Colt cartridge. Very potent.</description>
 		<statBases>
@@ -53,13 +9,12 @@
 		<tradeTags>
 			<li>CE_AutoEnableTrade</li>
 			<li>CE_AutoEnableCrafting</li>
-    		<li>CE_40K_Ammo</li>
+			<li>CE_40K_Ammo</li>
 		</tradeTags>
 		<thingCategories>
 			<li>Ammo454Casull</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="454CasullBase">
 		<defName>Ammo_454Casull_FMJ</defName>
 		<label>.454 Casull (FMJ)</label>
@@ -70,7 +25,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_454Casull_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="454CasullBase">
 		<defName>Ammo_454Casull_AP</defName>
 		<label>.454 Casull (AP)</label>
@@ -81,7 +35,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_454Casull_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="454CasullBase">
 		<defName>Ammo_454Casull_HP</defName>
 		<label>.454 Casull (HP)</label>
@@ -92,9 +45,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_454Casull_HP</cookOffProjectile>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base454CasullBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -108,7 +58,6 @@
 			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base454CasullBullet">
 		<defName>Bullet_454Casull_FMJ</defName>
 		<label>.454 Casull bullet (FMJ)</label>
@@ -118,7 +67,6 @@
 			<armorPenetrationBlunt>48.66</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base454CasullBullet">
 		<defName>Bullet_454Casull_AP</defName>
 		<label>.454 Casull bullet (AP)</label>
@@ -128,7 +76,6 @@
 			<armorPenetrationBlunt>48.66</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base454CasullBullet">
 		<defName>Bullet_454Casull_HP</defName>
 		<label>.454 Casull bullet (HP)</label>
@@ -138,9 +85,6 @@
 			<armorPenetrationBlunt>48.66</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_454Casull_FMJ</defName>
 		<label>make .454 Casull (FMJ) cartridge x500</label>
@@ -166,7 +110,6 @@
 		</products>
 		<workAmount>3400</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_454Casull_AP</defName>
 		<label>make .454 Casull (AP) cartridge x500</label>
@@ -192,7 +135,6 @@
 		</products>
 		<workAmount>4080</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_454Casull_HP</defName>
 		<label>make .454 Casull (HP) cartridge x500</label>
@@ -218,5 +160,4 @@
 		</products>
 		<workAmount>3400</workAmount>
 	</RecipeDef>
-
 </Defs>

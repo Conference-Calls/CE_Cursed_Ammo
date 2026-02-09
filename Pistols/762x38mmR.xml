@@ -1,28 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo762x38mmR</defName>
-		<label>7.62x38mmR</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_762x38mmR</defName>
-		<label>7.62x38mmR</label>
-		<ammoTypes>
-			<Ammo_762x38mmR_FMJ>Bullet_762x38mmR_FMJ</Ammo_762x38mmR_FMJ>
-			<Ammo_762x38mmR_AP>Bullet_762x38mmR_AP</Ammo_762x38mmR_AP>
-			<Ammo_762x38mmR_HP>Bullet_762x38mmR_HP</Ammo_762x38mmR_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="762x38mmRBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>Uncommon rimmed pistol cartridge with the bullet seated further down the casing.</description>
 		<statBases>
@@ -37,7 +14,6 @@
 			<li>Ammo762x38mmR</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="762x38mmRBase">
 		<defName>Ammo_762x38mmR_FMJ</defName>
 		<label>7.62x38mmR (FMJ)</label>
@@ -48,7 +24,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_762x38mmR_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="762x38mmRBase">
 		<defName>Ammo_762x38mmR_AP</defName>
 		<label>7.62x38mmR (AP)</label>
@@ -59,7 +34,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_762x38mmR_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="762x38mmRBase">
 		<defName>Ammo_762x38mmR_HP</defName>
 		<label>7.62x38mmR (HP)</label>
@@ -70,9 +44,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_762x38mmR_HP</cookOffProjectile>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base762x38mmRBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -86,7 +57,6 @@
 			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base762x38mmRBullet">
 		<defName>Bullet_762x38mmR_FMJ</defName>
 		<label>7.62mmR pistol bullet (FMJ)</label>
@@ -96,7 +66,6 @@
 			<armorPenetrationBlunt>6.74</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base762x38mmRBullet">
 		<defName>Bullet_762x38mmR_AP</defName>
 		<label>7.62mm pistol bullet (AP)</label>
@@ -106,7 +75,6 @@
 			<armorPenetrationBlunt>6.74</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base762x38mmRBullet">
 		<defName>Bullet_762x38mmR_HP</defName>
 		<label>7.62mm pistol bullet (HP)</label>
@@ -116,9 +84,6 @@
 			<armorPenetrationBlunt>6.74</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_762x38mmR_FMJ</defName>
 		<label>make 7.62x38mmR (FMJ) cartridge x500</label>
@@ -144,7 +109,6 @@
 		</products>
 		<workAmount>1600</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_762x38mmR_AP</defName>
 		<label>make 7.62x38mmR (AP) cartridge x500</label>
@@ -170,7 +134,6 @@
 		</products>
 		<workAmount>1920</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_762x38mmR_HP</defName>
 		<label>make 7.62x38mmR (HP) cartridge x500</label>
@@ -196,5 +159,4 @@
 		</products>
 		<workAmount>1600</workAmount>
 	</RecipeDef>
-
 </Defs>

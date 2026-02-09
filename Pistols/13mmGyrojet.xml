@@ -1,28 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo13mmGyrojet</defName>
-		<label>13mm Gyrojet</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_13mmGyrojet</defName>
-		<label>13mm Gyrojet</label>
-		<ammoTypes>
-			<Ammo_13mmGyrojet_FMJ>Bullet_13mmGyrojet_FMJ</Ammo_13mmGyrojet_FMJ>
-			<Ammo_13mmGyrojet_AP>Bullet_13mmGyrojet_AP</Ammo_13mmGyrojet_AP>
-			<Ammo_13mmGyrojet_HP>Bullet_13mmGyrojet_HP</Ammo_13mmGyrojet_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="13mmGyrojetBase" ParentName="AmmoBase" Abstract="True">
 		<description>Rare pistol rocket that utilizes miniature rockets for propulsion instead of gunpowder.</description>
 		<statBases>
@@ -37,7 +14,6 @@
 			<li>Ammo13mmGyrojet</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="13mmGyrojetBase">
 		<defName>Ammo_13mmGyrojet_FMJ</defName>
 		<label>13mm Gyrojet (FMJ)</label>
@@ -48,7 +24,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_13mmGyrojet_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="13mmGyrojetBase">
 		<defName>Ammo_13mmGyrojet_AP</defName>
 		<label>13mm Gyrojet (AP)</label>
@@ -59,7 +34,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_13mmGyrojet_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="13mmGyrojetBase">
 		<defName>Ammo_13mmGyrojet_HP</defName>
 		<label>13mm Gyrojet (HP)</label>
@@ -70,9 +44,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_13mmGyrojet_HP</cookOffProjectile>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base13mmGyrojetBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -86,7 +57,6 @@
 			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base13mmGyrojetBullet">
 		<defName>Bullet_13mmGyrojet_FMJ</defName>
 		<label>13mm Gyrojet bullet (FMJ)</label>
@@ -96,7 +66,6 @@
 			<armorPenetrationBlunt>10.2</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base13mmGyrojetBullet">
 		<defName>Bullet_13mmGyrojet_AP</defName>
 		<label>13mm Gyrojet bullet (AP)</label>
@@ -106,7 +75,6 @@
 			<armorPenetrationBlunt>10.2</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base13mmGyrojetBullet">
 		<defName>Bullet_13mmGyrojet_HP</defName>
 		<label>13mm Gyrojet bullet (HP)</label>
@@ -116,9 +84,6 @@
 			<armorPenetrationBlunt>10.2</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_13mmGyrojet_FMJ</defName>
 		<label>make 13mm Gyrojet (FMJ) rocket x500</label>
@@ -144,7 +109,6 @@
 		</products>
 		<workAmount>1400</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_13mmGyrojet_AP</defName>
 		<label>make 13mm Gyrojet (AP) rocket x500</label>
@@ -170,7 +134,6 @@
 		</products>
 		<workAmount>1680</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_13mmGyrojet_HP</defName>
 		<label>make 13mm Gyrojet (HP) rocket x500</label>
@@ -196,5 +159,4 @@
 		</products>
 		<workAmount>1400</workAmount>
 	</RecipeDef>
-
 </Defs>

@@ -1,28 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo38ACP</defName>
-		<label>.38 ACP</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_38ACP</defName>
-		<label>.38 ACP</label>
-		<ammoTypes>
-			<Ammo_38ACP_FMJ>Bullet_38ACP_FMJ</Ammo_38ACP_FMJ>
-			<Ammo_38ACP_AP>Bullet_38ACP_AP</Ammo_38ACP_AP>
-			<Ammo_38ACP_HP>Bullet_38ACP_HP</Ammo_38ACP_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="38ACPBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>Low caliber handgun cartridge lacking in stopping power.</description>
 		<statBases>
@@ -37,7 +14,6 @@
 			<li>Ammo38ACP</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="38ACPBase">
 		<defName>Ammo_38ACP_FMJ</defName>
 		<label>.38 ACP (FMJ)</label>
@@ -48,7 +24,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_38ACP_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="38ACPBase">
 		<defName>Ammo_38ACP_AP</defName>
 		<label>.38 ACP (AP)</label>
@@ -59,7 +34,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_38ACP_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="38ACPBase">
 		<defName>Ammo_38ACP_HP</defName>
 		<label>.38 ACP (HP)</label>
@@ -69,9 +43,6 @@
 		</graphicData>
 		<ammoClass>HollowPoint</ammoClass>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base38ACPBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -85,7 +56,6 @@
 			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base38ACPBullet">
 		<defName>Bullet_38ACP_FMJ</defName>
 		<label>.38 ACP bullet (FMJ)</label>
@@ -95,7 +65,6 @@
 			<armorPenetrationBlunt>8.58</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base38ACPBullet">
 		<defName>Bullet_38ACP_AP</defName>
 		<label>.38 ACP bullet (AP)</label>
@@ -105,7 +74,6 @@
 			<armorPenetrationBlunt>8.58</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base38ACPBullet">
 		<defName>Bullet_38ACP_HP</defName>
 		<label>.38 ACP bullet (HP)</label>
@@ -115,9 +83,6 @@
 			<armorPenetrationBlunt>8.58</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_38ACP_FMJ</defName>
 		<label>make .38 ACP cartridge x500</label>
@@ -143,7 +108,6 @@
 		</products>
 		<workAmount>1600</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_38ACP_AP</defName>
 		<label>make .38 ACP (AP) cartridge x500</label>
@@ -169,7 +133,6 @@
 		</products>
 		<workAmount>1920</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_38ACP_HP</defName>
 		<label>make .38 ACP (HP) cartridge x500</label>
@@ -195,5 +158,4 @@
 		</products>
 		<workAmount>1600</workAmount>
 	</RecipeDef>
-
 </Defs>

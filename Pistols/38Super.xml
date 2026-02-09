@@ -1,28 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo38Super</defName>
-		<label>.38 Super</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_38Super</defName>
-		<label>.38 Super</label>
-		<ammoTypes>
-			<Ammo_38Super_FMJ>Bullet_38Super_FMJ</Ammo_38Super_FMJ>
-			<Ammo_38Super_AP>Bullet_38Super_AP</Ammo_38Super_AP>
-			<Ammo_38Super_HP>Bullet_38Super_HP</Ammo_38Super_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="38SuperBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>Dimensionally identical to the .38 ACP cartridge, but with a much higher pressure powder load for more powerful handguns.</description>
 		<statBases>
@@ -37,7 +14,6 @@
 			<li>Ammo38Super</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="38SuperBase">
 		<defName>Ammo_38Super_FMJ</defName>
 		<label>.38 Super (FMJ)</label>
@@ -48,7 +24,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_38Super_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="38SuperBase">
 		<defName>Ammo_38Super_AP</defName>
 		<label>.38 Super (AP)</label>
@@ -59,7 +34,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_38Super_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="38SuperBase">
 		<defName>Ammo_38Super_HP</defName>
 		<label>.38 Super (HP)</label>
@@ -70,9 +44,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_38Super_HP</cookOffProjectile>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base38SuperBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -86,7 +57,6 @@
 			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base38SuperBullet">
 		<defName>Bullet_38Super_FMJ</defName>
 		<label>.38 Super bullet (FMJ)</label>
@@ -96,7 +66,6 @@
 			<armorPenetrationBlunt>14.84</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base38SuperBullet">
 		<defName>Bullet_38Super_AP</defName>
 		<label>.38 Super bullet (AP)</label>
@@ -106,7 +75,6 @@
 			<armorPenetrationBlunt>14.84</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base38SuperBullet">
 		<defName>Bullet_38Super_HP</defName>
 		<label>.38 Super bullet (HP)</label>
@@ -116,9 +84,6 @@
 			<armorPenetrationBlunt>14.84</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_38Super_FMJ</defName>
 		<label>make .38 Super (FMJ) cartridge x500</label>
@@ -144,7 +109,6 @@
 		</products>
 		<workAmount>1600</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_38Super_AP</defName>
 		<label>make .38 Super (AP) cartridge x500</label>
@@ -170,7 +134,6 @@
 		</products>
 		<workAmount>1920</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_38Super_HP</defName>
 		<label>make .38 Super (HP) cartridge x500</label>
@@ -196,5 +159,4 @@
 		</products>
 		<workAmount>1600</workAmount>
 	</RecipeDef>
-
 </Defs>

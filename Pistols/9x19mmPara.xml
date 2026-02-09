@@ -1,39 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo9x19mmPara</defName>
-		<label>9x19mm Parabellum</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_9x19mmPara</defName>
-		<label>9x19mm Para</label>
-		<ammoTypes>
-			<Ammo_9x19mmPara_FMJ>Bullet_9x19mmPara_FMJ</Ammo_9x19mmPara_FMJ>
-			<Ammo_9x19mmPara_AP>Bullet_9x19mmPara_AP</Ammo_9x19mmPara_AP>
-			<Ammo_9x19mmPara_HP>Bullet_9x19mmPara_HP</Ammo_9x19mmPara_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_9x19mmParaSD</defName>
-		<label>9x19mm Para Subsonic</label>
-		<ammoTypes>
-			<Ammo_9x19mmPara_FMJ>Bullet_9x19mmParaSD_FMJ</Ammo_9x19mmPara_FMJ>
-			<Ammo_9x19mmPara_AP>Bullet_9x19mmParaSD_AP</Ammo_9x19mmPara_AP>
-			<Ammo_9x19mmPara_HP>Bullet_9x19mmParaSD_HP</Ammo_9x19mmPara_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="9x19mmParaBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>Common pistol cartridge used by a variety of handguns and SMGs.</description>
 		<statBases>
@@ -48,7 +14,6 @@
 			<li>Ammo9x19mmPara</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="9x19mmParaBase">
 		<defName>Ammo_9x19mmPara_FMJ</defName>
 		<label>9x19mm Para (FMJ)</label>
@@ -59,7 +24,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_9x19mmPara_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="9x19mmParaBase">
 		<defName>Ammo_9x19mmPara_AP</defName>
 		<label>9x19mm Para (AP)</label>
@@ -70,7 +34,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_9x19mmPara_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="9x19mmParaBase">
 		<defName>Ammo_9x19mmPara_HP</defName>
 		<label>9x19mm Para (HP)</label>
@@ -81,9 +44,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_9x19mmPara_HP</cookOffProjectile>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base9x19mmParaBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -97,7 +57,6 @@
 			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef Name="Base9x19mmParaSDBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -109,7 +68,6 @@
 			<dropsCasings>true</dropsCasings>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base9x19mmParaBullet">
 		<defName>Bullet_9x19mmPara_FMJ</defName>
 		<label>9mm Para bullet (FMJ)</label>
@@ -119,7 +77,6 @@
 			<armorPenetrationBlunt>9.66</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base9x19mmParaBullet">
 		<defName>Bullet_9x19mmPara_AP</defName>
 		<label>9mm Para bullet (AP)</label>
@@ -129,7 +86,6 @@
 			<armorPenetrationBlunt>9.66</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base9x19mmParaBullet">
 		<defName>Bullet_9x19mmPara_HP</defName>
 		<label>9mm Para bullet (HP)</label>
@@ -139,7 +95,6 @@
 			<armorPenetrationBlunt>9.66</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base9x19mmParaSDBullet">
 		<defName>Bullet_9x19mmParaSD_FMJ</defName>
 		<label>9mm Para bullet (FMJ)</label>
@@ -149,7 +104,6 @@
 			<armorPenetrationBlunt>6.70</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base9x19mmParaSDBullet">
 		<defName>Bullet_9x19mmParaSD_AP</defName>
 		<label>9mm Para bullet (AP)</label>
@@ -159,7 +113,6 @@
 			<armorPenetrationBlunt>6.70</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base9x19mmParaSDBullet">
 		<defName>Bullet_9x19mmParaSD_HP</defName>
 		<label>9mm Para bullet (HP)</label>
@@ -169,9 +122,6 @@
 			<armorPenetrationBlunt>6.70</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_9x19mmPara_FMJ</defName>
 		<label>make 9x19mm Parabellum (FMJ) cartridge x500</label>
@@ -197,7 +147,6 @@
 		</products>
 		<workAmount>1400</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_9x19mmPara_AP</defName>
 		<label>make 9x19mm Parabellum (AP) cartridge x500</label>
@@ -223,7 +172,6 @@
 		</products>
 		<workAmount>1680</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_9x19mmPara_HP</defName>
 		<label>make 9x19mm Parabellum (HP) cartridge x500</label>
@@ -249,5 +197,4 @@
 		</products>
 		<workAmount>1400</workAmount>
 	</RecipeDef>
-
 </Defs>

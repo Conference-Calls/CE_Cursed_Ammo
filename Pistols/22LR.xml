@@ -1,28 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo22LR</defName>
-		<label>.22 LR</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_22LR</defName>
-		<label>.22 LR</label>
-		<ammoTypes>
-			<Ammo_22LR_FMJ>Bullet_22LR_FMJ</Ammo_22LR_FMJ>
-			<Ammo_22LR_AP>Bullet_22LR_AP</Ammo_22LR_AP>
-			<Ammo_22LR_HP>Bullet_22LR_HP</Ammo_22LR_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="22LRBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>Low caliber handgun cartridge massively lacking in stopping power.</description>
 		<statBases>
@@ -37,7 +14,6 @@
 			<li>Ammo22LR</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="22LRBase">
 		<defName>Ammo_22LR_FMJ</defName>
 		<label>.22 LR (FMJ)</label>
@@ -48,7 +24,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_22LR_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="22LRBase">
 		<defName>Ammo_22LR_AP</defName>
 		<label>.22 LR (AP)</label>
@@ -59,7 +34,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_22LR_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="22LRBase">
 		<defName>Ammo_22LR_HP</defName>
 		<label>.22 LR (HP)</label>
@@ -70,9 +44,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_22LR_HP</cookOffProjectile>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base22LRBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -86,7 +57,6 @@
 			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base22LRBullet">
 		<defName>Bullet_22LR_FMJ</defName>
 		<label>.22 LR bullet (FMJ)</label>
@@ -96,7 +66,6 @@
 			<armorPenetrationBlunt>4.06</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base22LRBullet">
 		<defName>Bullet_22LR_AP</defName>
 		<label>.22 LR bullet (AP)</label>
@@ -106,7 +75,6 @@
 			<armorPenetrationBlunt>4.06</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base22LRBullet">
 		<defName>Bullet_22LR_HP</defName>
 		<label>.22 LR bullet (HP)</label>
@@ -116,9 +84,6 @@
 			<armorPenetrationBlunt>4.06</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_22LR_FMJ</defName>
 		<label>make .22 LR (FMJ) cartridge x500</label>
@@ -144,7 +109,6 @@
 		</products>
 		<workAmount>600</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_22LR_AP</defName>
 		<label>make .22 LR (AP) cartridge x500</label>
@@ -170,7 +134,6 @@
 		</products>
 		<workAmount>720</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_22LR_HP</defName>
 		<label>make .22 LR (HP) cartridge x500</label>
@@ -196,5 +159,4 @@
 		</products>
 		<workAmount>600</workAmount>
 	</RecipeDef>
-
 </Defs>

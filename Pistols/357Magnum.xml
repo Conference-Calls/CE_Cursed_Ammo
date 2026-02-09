@@ -1,67 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo357Magnum</defName>
-		<label>.357 Magnum</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_357Magnum</defName>
-		<label>.357 Magnum</label>
-		<ammoTypes>
-			<Ammo_357Magnum_FMJ>Bullet_357Magnum_FMJ</Ammo_357Magnum_FMJ>
-			<Ammo_357Magnum_AP>Bullet_357Magnum_AP</Ammo_357Magnum_AP>
-			<Ammo_357Magnum_HP>Bullet_357Magnum_HP</Ammo_357Magnum_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_PistolMagnum</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_357Magnum_HV</defName>
-		<label>.357 Magnum</label>
-		<ammoTypes>
-			<Ammo_357Magnum_FMJ>Bullet_357Magnum_HV_FMJ</Ammo_357Magnum_FMJ>
-			<Ammo_357Magnum_AP>Bullet_357Magnum_HV_AP</Ammo_357Magnum_AP>
-			<Ammo_357Magnum_HP>Bullet_357Magnum_HV_HP</Ammo_357Magnum_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_PistolMagnum</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_357Magnum_Revolver</defName>
-		<label>.357 Magnum/.38 Special</label>
-		<ammoTypes>
-			<Ammo_357Magnum_FMJ>Bullet_357Magnum_FMJ</Ammo_357Magnum_FMJ>
-			<Ammo_357Magnum_AP>Bullet_357Magnum_AP</Ammo_357Magnum_AP>
-			<Ammo_357Magnum_HP>Bullet_357Magnum_HP</Ammo_357Magnum_HP>
-			<Ammo_38Special_FMJ>Bullet_38Special_FMJ</Ammo_38Special_FMJ>
-			<Ammo_38Special_AP>Bullet_38Special_AP</Ammo_38Special_AP>
-			<Ammo_38Special_HP>Bullet_38Special_HP</Ammo_38Special_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_PistolMagnum</similarTo>
-	</CombatExtended.AmmoSetDef>
-	
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_357Magnum_Lever</defName>
-		<label>.357 Magnum/.38 Special</label>
-		<ammoTypes>
-			<Ammo_357Magnum_FMJ>Bullet_357Magnum_HV_FMJ</Ammo_357Magnum_FMJ>
-			<Ammo_357Magnum_AP>Bullet_357Magnum_HV_AP</Ammo_357Magnum_AP>
-			<Ammo_357Magnum_HP>Bullet_357Magnum_HV_HP</Ammo_357Magnum_HP>
-			<Ammo_38Special_FMJ>Bullet_38Special_HV_FMJ</Ammo_38Special_FMJ>
-			<Ammo_38Special_AP>Bullet_38Special_HV_AP</Ammo_38Special_AP>
-			<Ammo_38Special_HP>Bullet_38Special_HV_HP</Ammo_38Special_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_PistolMagnum</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="357MagnumBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>Ancient pistol cartridge originally designed for revolvers.</description>
 		<statBases>
@@ -76,7 +14,6 @@
 			<li>Ammo357Magnum</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="357MagnumBase">
 		<defName>Ammo_357Magnum_FMJ</defName>
 		<label>.357 Magnum (FMJ)</label>
@@ -87,7 +24,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_357Magnum_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="357MagnumBase">
 		<defName>Ammo_357Magnum_AP</defName>
 		<label>.357 Magnum (AP)</label>
@@ -98,7 +34,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_357Magnum_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="357MagnumBase">
 		<defName>Ammo_357Magnum_HP</defName>
 		<label>.357 Magnum (HP)</label>
@@ -109,9 +44,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_357Magnum_HP</cookOffProjectile>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base357MagnumBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -125,7 +57,6 @@
 			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base357MagnumBullet">
 		<defName>Bullet_357Magnum_FMJ</defName>
 		<label>.357 Magnum bullet (FMJ)</label>
@@ -135,7 +66,6 @@
 			<armorPenetrationBlunt>18.6</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base357MagnumBullet">
 		<defName>Bullet_357Magnum_AP</defName>
 		<label>.357 Magnum bullet (AP)</label>
@@ -145,7 +75,6 @@
 			<armorPenetrationBlunt>18.6</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base357MagnumBullet">
 		<defName>Bullet_357Magnum_HP</defName>
 		<label>.357 Magnum bullet (HP)</label>
@@ -155,9 +84,6 @@
 			<armorPenetrationBlunt>18.6</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ========= High velocity ========= -->
-
 	<ThingDef ParentName="Base357MagnumBullet">
 		<defName>Bullet_357Magnum_HV_FMJ</defName>
 		<label>.357 Magnum bullet (FMJ)</label>
@@ -168,7 +94,6 @@
 			<speed>109</speed>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base357MagnumBullet">
 		<defName>Bullet_357Magnum_HV_AP</defName>
 		<label>.357 Magnum bullet (AP)</label>
@@ -179,7 +104,6 @@
 			<speed>109</speed>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base357MagnumBullet">
 		<defName>Bullet_357Magnum_HV_HP</defName>
 		<label>.357 Magnum bullet (HP)</label>
@@ -190,9 +114,6 @@
 			<speed>109</speed>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_357Magnum_FMJ</defName>
 		<label>make .357 Magnum (FMJ) cartridge x500</label>
@@ -218,7 +139,6 @@
 		</products>
 		<workAmount>1800</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_357Magnum_AP</defName>
 		<label>make .357 Magnum (AP) cartridge x500</label>
@@ -244,7 +164,6 @@
 		</products>
 		<workAmount>2160</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_357Magnum_HP</defName>
 		<label>make .357 Magnum (HP) cartridge x500</label>
@@ -270,5 +189,4 @@
 		</products>
 		<workAmount>1800</workAmount>
 	</RecipeDef>
-
 </Defs>

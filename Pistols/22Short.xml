@@ -1,28 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo22Short</defName>
-		<label>.22 Short</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_22Short</defName>
-		<label>.22 Short</label>
-		<ammoTypes>
-			<Ammo_22Short_FMJ>Bullet_22Short_FMJ</Ammo_22Short_FMJ>
-			<Ammo_22Short_AP>Bullet_22Short_AP</Ammo_22Short_AP>
-			<Ammo_22Short_HP>Bullet_22Short_HP</Ammo_22Short_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="22ShortBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>Ultra-light cartridge originally designed for self-defense, but now very obsolete.</description>
 		<statBases>
@@ -37,7 +14,6 @@
 			<li>Ammo22Short</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="22ShortBase">
 		<defName>Ammo_22Short_FMJ</defName>
 		<label>.22 Short (FMJ)</label>
@@ -48,7 +24,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_22Short_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="22ShortBase">
 		<defName>Ammo_22Short_AP</defName>
 		<label>.22 Short (AP)</label>
@@ -59,7 +34,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_22Short_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="22ShortBase">
 		<defName>Ammo_22Short_HP</defName>
 		<label>.22 Short (HP)</label>
@@ -70,9 +44,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_22Short_HP</cookOffProjectile>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base22ShortBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -86,7 +57,6 @@
 			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base22ShortBullet">
 		<defName>Bullet_22Short_FMJ</defName>
 		<label>.22 Short bullet</label>
@@ -96,7 +66,6 @@
 			<armorPenetrationBlunt>1.180</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base22ShortBullet">
 		<defName>Bullet_22Short_AP</defName>
 		<label>.22 Short bullet (AP)</label>
@@ -106,7 +75,6 @@
 			<armorPenetrationBlunt>1.180</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base22ShortBullet">
 		<defName>Bullet_22Short_HP</defName>
 		<label>.22 Short bullet (HP)</label>
@@ -116,9 +84,6 @@
 			<armorPenetrationBlunt>1.180</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_22Short_FMJ</defName>
 		<label>make .22 Short cartridge x500</label>
@@ -144,7 +109,6 @@
 		</products>
 		<workAmount>400</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_22Short_AP</defName>
 		<label>make .22 Short (AP) cartridge x500</label>
@@ -170,7 +134,6 @@
 		</products>
 		<workAmount>480</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_22Short_HP</defName>
 		<label>make .22 Short (HP) cartridge x500</label>
@@ -196,5 +159,4 @@
 		</products>
 		<workAmount>400</workAmount>
 	</RecipeDef>
-
 </Defs>

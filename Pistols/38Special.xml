@@ -1,28 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingCategoryDef>
-		<defName>Ammo38Special</defName>
-		<label>.38 Special</label>
-		<parent>AmmoPistols</parent>
-		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
-	</ThingCategoryDef>
-
-	<!-- ==================== AmmoSet ========================== -->
-
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_38Special</defName>
-		<label>.38 Special</label>
-		<ammoTypes>
-			<Ammo_38Special_FMJ>Bullet_38Special_FMJ</Ammo_38Special_FMJ>
-			<Ammo_38Special_AP>Bullet_38Special_AP</Ammo_38Special_AP>
-			<Ammo_38Special_HP>Bullet_38Special_HP</Ammo_38Special_HP>
-		</ammoTypes>
-		<similarTo>AmmoSet_Pistol</similarTo>
-	</CombatExtended.AmmoSetDef>
-
-	<!-- ==================== Ammo ========================== -->
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="38SpecialBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>Ancient low-power revolver cartridge renowned for its manageability.</description>
 		<statBases>
@@ -37,7 +14,6 @@
 			<li>Ammo38Special</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="38SpecialBase">
 		<defName>Ammo_38Special_FMJ</defName>
 		<label>.38 Special (FMJ)</label>
@@ -48,7 +24,6 @@
 		<ammoClass>FullMetalJacket</ammoClass>
 		<cookOffProjectile>Bullet_38Special_FMJ</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="38SpecialBase">
 		<defName>Ammo_38Special_AP</defName>
 		<label>.38 Special (AP)</label>
@@ -59,7 +34,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>Bullet_38Special_AP</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="38SpecialBase">
 		<defName>Ammo_38Special_HP</defName>
 		<label>.38 Special (HP)</label>
@@ -70,9 +44,6 @@
 		<ammoClass>HollowPoint</ammoClass>
 		<cookOffProjectile>Bullet_38Special_HP</cookOffProjectile>
 	</ThingDef>
-
-	<!-- ================== Projectiles ================== -->
-
 	<ThingDef Name="Base38SpecialBullet" ParentName="BaseBulletCE" Abstract="true">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
@@ -86,7 +57,6 @@
 			<casingFilthDefname>Filth_PistolAmmoCasings</casingFilthDefname>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base38SpecialBullet">
 		<defName>Bullet_38Special_FMJ</defName>
 		<label>.38 Special bullet (FMJ)</label>
@@ -96,7 +66,6 @@
 			<armorPenetrationBlunt>6.94</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base38SpecialBullet">
 		<defName>Bullet_38Special_AP</defName>
 		<label>.38 Special bullet (AP)</label>
@@ -106,7 +75,6 @@
 			<armorPenetrationBlunt>6.94</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base38SpecialBullet">
 		<defName>Bullet_38Special_HP</defName>
 		<label>.38 Special bullet (HP)</label>
@@ -116,9 +84,6 @@
 			<armorPenetrationBlunt>6.94</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
-
-	<!-- ========= High velocity ========= -->
-
 	<ThingDef ParentName="Base38SpecialBullet">
 		<defName>Bullet_38Special_HV_FMJ</defName>
 		<label>.38 Special bullet (FMJ)</label>
@@ -129,7 +94,6 @@
 			<speed>92</speed>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base38SpecialBullet">
 		<defName>Bullet_38Special_HV_AP</defName>
 		<label>.38 Special bullet (AP)</label>
@@ -140,7 +104,6 @@
 			<speed>92</speed>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base38SpecialBullet">
 		<defName>Bullet_38Special_HV_HP</defName>
 		<label>.38 Special bullet (HP)</label>
@@ -151,10 +114,6 @@
 			<speed>92</speed>
 		</projectile>
 	</ThingDef>
-
-	<!-- ==================== Recipes ========================== -->
-
-	<!-- Standard manufacture -->
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_38Special_FMJ</defName>
 		<label>make .38 Special (FMJ) cartridge x500</label>
@@ -180,7 +139,6 @@
 		</products>
 		<workAmount>1400</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_38Special_AP</defName>
 		<label>make .38 Special (AP) cartridge x500</label>
@@ -206,7 +164,6 @@
 		</products>
 		<workAmount>1680</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_38Special_HP</defName>
 		<label>make .38 Special (HP) cartridge x500</label>
@@ -232,5 +189,4 @@
 		</products>
 		<workAmount>1400</workAmount>
 	</RecipeDef>
-
 </Defs>
