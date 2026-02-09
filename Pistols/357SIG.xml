@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="357SIGBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>A powerful cartridge designed to bring the performance of .357 Magnum to autoloaders.</description>
-		<statBases>
-			<Mass>0.016</Mass>
-			<Bulk>0.01</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo357SIG</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="357SIGBase">
 		<defName>Ammo_357SIG_FMJ</defName>
 		<label>.357 SIG (FMJ)</label>

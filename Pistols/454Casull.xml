@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="454CasullBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>A lengthened and reinforced .45 Colt cartridge. Very potent.</description>
-		<statBases>
-			<Mass>0.032</Mass>
-			<Bulk>0.02</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-			<li>CE_40K_Ammo</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo454Casull</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="454CasullBase">
 		<defName>Ammo_454Casull_FMJ</defName>
 		<label>.454 Casull (FMJ)</label>

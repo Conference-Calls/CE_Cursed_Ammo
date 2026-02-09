@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="460SWMagnumBase" ParentName="AmmoBase" Abstract="True">
-		<description>Designed for big game hunting, this is one of the fastest handgun cartridges ever designed.</description>
-		<statBases>
-			<Mass>0.034</Mass>
-			<Bulk>0.03</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo460SWMagnum</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="460SWMagnumBase">
 		<defName>Ammo_460SWMagnum_FMJ</defName>
 		<label>.460 S&amp;W Magnum (FMJ)</label>

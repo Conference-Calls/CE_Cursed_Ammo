@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="38SpecialBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>Ancient low-power revolver cartridge renowned for its manageability.</description>
-		<statBases>
-			<Mass>0.014</Mass>
-			<Bulk>0.01</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo38Special</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="38SpecialBase">
 		<defName>Ammo_38Special_FMJ</defName>
 		<label>.38 Special (FMJ)</label>

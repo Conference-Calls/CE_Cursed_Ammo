@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="44SWSpecialBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>A centerfire pistol and revolver cartridge that was one of the first to be purposely designed for smokeless powder.</description>
-		<statBases>
-			<Mass>0.019</Mass>
-			<Bulk>0.02</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo44SWSpecial</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="44SWSpecialBase">
 		<defName>Ammo_44SWSpecial_FMJ</defName>
 		<label>.44 Special (FMJ)</label>

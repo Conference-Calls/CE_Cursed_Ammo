@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="75FKBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>A high-velocity bottlenecked handgun cartridge capable of penetrating lightly armored targets.</description>
-		<statBases>
-			<Mass>0.011</Mass>
-			<Bulk>0.01</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo75FK</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="75FKBase">
 		<defName>Ammo_75FK_FMJ</defName>
 		<label>7.5 FK (FMJ)</label>

@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="45ACPBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>Pistol cartridge favoured for its above average stopping power.</description>
-		<statBases>
-			<Mass>0.02</Mass>
-			<Bulk>0.02</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-			<li>CE_40K_Ammo</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo45ACP</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="45ACPBase">
 		<defName>Ammo_45ACP_FMJ</defName>
 		<label>.45 ACP (FMJ)</label>

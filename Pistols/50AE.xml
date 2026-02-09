@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="50AEBase" ParentName="AmmoBase" Abstract="True">
-		<description>This high-powered cartridge is one of the largest calibers found in handguns.</description>
-		<statBases>
-			<Mass>0.029</Mass>
-			<Bulk>0.02</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo50AE</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="50AEBase">
 		<defName>Ammo_50AE_FMJ</defName>
 		<label>.50 AE (FMJ)</label>

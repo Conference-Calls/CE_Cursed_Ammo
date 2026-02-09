@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="763x25mmMauserBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>Uncommon pistol cartridge used by a few handguns.</description>
-		<statBases>
-			<Mass>0.012</Mass>
-			<Bulk>0.01</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo763x25mmMauser</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="763x25mmMauserBase">
 		<defName>Ammo_763x25mmMauser_FMJ</defName>
 		<label>7.63x25mm Mauser (FMJ)</label>

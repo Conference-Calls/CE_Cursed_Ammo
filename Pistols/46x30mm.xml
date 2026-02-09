@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="46x30mmBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>This high-velocity handgun cartridge was specifically designed for military personnel to defeat body armor.</description>
-		<statBases>
-			<Mass>0.007</Mass>
-			<Bulk>0.01</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo46x30mm</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="46x30mmBase">
 		<defName>Ammo_46x30mm_FMJ</defName>
 		<label>4.6x30mm (FMJ)</label>

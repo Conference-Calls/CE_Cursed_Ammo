@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="357MagnumBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>Ancient pistol cartridge originally designed for revolvers.</description>
-		<statBases>
-			<Mass>0.017</Mass>
-			<Bulk>0.01</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo357Magnum</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="357MagnumBase">
 		<defName>Ammo_357Magnum_FMJ</defName>
 		<label>.357 Magnum (FMJ)</label>

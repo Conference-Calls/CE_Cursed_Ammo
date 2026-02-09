@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="500SWMagnumBase" ParentName="AmmoBase" Abstract="True">
-		<description>Designed for big game hunting, this is one of the most powerful handgun cartridges ever designed.</description>
-		<statBases>
-			<Mass>0.035</Mass>
-			<Bulk>0.03</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo500SWMagnum</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="500SWMagnumBase">
 		<defName>Ammo_500SWMagnum_FMJ</defName>
 		<label>.500 S&amp;W Magnum (FMJ)</label>

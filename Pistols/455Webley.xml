@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="455WebleyBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>Low-velocity handgun cartridge most commonly used in top break revolvers.</description>
-		<statBases>
-			<Mass>0.024</Mass>
-			<Bulk>0.02</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo455Webley</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="455WebleyBase">
 		<defName>Ammo_455Webley_FMJ</defName>
 		<label>.455 Webley (FMJ)</label>

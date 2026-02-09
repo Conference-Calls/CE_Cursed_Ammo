@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="45SchofieldBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>Old school revolver cartridge designed for the frontier, very similar to the longer .45 Colt.</description>
-		<statBases>
-			<Mass>0.021</Mass>
-			<Bulk>0.02</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Ammo45Schofield</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="45SchofieldBase">
 		<defName>Ammo_45Schofield_FMJ</defName>
 		<label>.45 Schofield (FMJ)</label>

@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Class="CombatExtended.AmmoDef" Name="FN57x29mmBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>This high-velocity handgun cartridge was specifically designed for military personnel to defeat body armor.</description>
-		<statBases>
-			<Mass>0.008</Mass>
-			<Bulk>0.01</Bulk>
-		</statBases>
-		<tradeTags>
-			<li>CE_AutoEnableTrade</li>
-			<li>CE_AutoEnableCrafting</li>
-		</tradeTags>
-		<thingCategories>
-			<li>AmmoFN57x28mm</li>
-		</thingCategories>
-	</ThingDef>
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="FN57x29mmBase">
 		<defName>Ammo_FN57x28mm_FMJ</defName>
 		<label>FN 5.7x28mm (FMJ)</label>
