@@ -17,6 +17,12 @@
 			<damageAmountBase>8</damageAmountBase>
 			<armorPenetrationSharp>999999</armorPenetrationSharp>
 			<armorPenetrationBlunt>6.44</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>EMP</def>
+					<amount>1</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 	<RecipeDef ParentName="AmmoRecipeBase">

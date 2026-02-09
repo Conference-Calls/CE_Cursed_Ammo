@@ -16,6 +16,7 @@
 		<label>.44-40 Winchester bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>8</damageAmountBase>
+			<damageDef>Bullet</damageDef>
 			<armorPenetrationSharp>22</armorPenetrationSharp>
 			<armorPenetrationBlunt>28.6</armorPenetrationBlunt>
 			<secondaryDamage>
@@ -86,6 +87,12 @@
 			<damageAmountBase>20</damageAmountBase>
 			<armorPenetrationSharp>999999</armorPenetrationSharp>
 			<armorPenetrationBlunt>28.6</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>EMP</def>
+					<amount>1</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 	<RecipeDef ParentName="AmmoRecipeBase">

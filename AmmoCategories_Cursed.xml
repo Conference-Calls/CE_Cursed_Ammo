@@ -16,7 +16,8 @@
 	<!-- 1. Sharp penetration increased to 999999 -->
 	<!-- 2. Crafting cost changed from Steel to Silver. 1 Shard is also added to the recipe cost -->
 	<!-- 3. texPath changed to */EAC_Silver -->
-	<!-- 4. Bullet damage doubled and converted to Disintegrate damage type -->
+	<!-- 4. Bullet damage doubled -->
+	<!-- 5. 1 secondary EMP damage added -->
 	<CombatExtended.AmmoCategoryDef>
 		<defName>EAC_Silver</defName>
 		<label>consecrated silver</label>

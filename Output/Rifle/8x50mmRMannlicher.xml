@@ -16,6 +16,7 @@
 		<label>8x50mmR Mannlicher bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>10</damageAmountBase>
+			<damageDef>Bullet</damageDef>
 			<armorPenetrationSharp>16</armorPenetrationSharp>
 			<armorPenetrationBlunt>55.74</armorPenetrationBlunt>
 			<secondaryDamage>
@@ -86,6 +87,12 @@
 			<damageAmountBase>24</damageAmountBase>
 			<armorPenetrationSharp>999999</armorPenetrationSharp>
 			<armorPenetrationBlunt>55.74</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>EMP</def>
+					<amount>1</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 	<RecipeDef ParentName="AmmoRecipeBase">

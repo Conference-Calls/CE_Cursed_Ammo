@@ -16,6 +16,7 @@
 		<label>7.92mm Kurz bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>8</damageAmountBase>
+			<damageDef>Bullet</damageDef>
 			<armorPenetrationSharp>15</armorPenetrationSharp>
 			<armorPenetrationBlunt>37.54</armorPenetrationBlunt>
 			<secondaryDamage>
@@ -86,6 +87,12 @@
 			<damageAmountBase>20</damageAmountBase>
 			<armorPenetrationSharp>999999</armorPenetrationSharp>
 			<armorPenetrationBlunt>37.54</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>EMP</def>
+					<amount>1</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 	<RecipeDef ParentName="AmmoRecipeBase">

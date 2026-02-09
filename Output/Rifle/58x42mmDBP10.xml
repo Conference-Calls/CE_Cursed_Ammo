@@ -16,6 +16,7 @@
 		<label>5.8mm DBP10 bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>7</damageAmountBase>
+			<damageDef>Bullet</damageDef>
 			<armorPenetrationSharp>18</armorPenetrationSharp>
 			<armorPenetrationBlunt>35.9</armorPenetrationBlunt>
 			<secondaryDamage>
@@ -86,6 +87,12 @@
 			<damageAmountBase>18</damageAmountBase>
 			<armorPenetrationSharp>999999</armorPenetrationSharp>
 			<armorPenetrationBlunt>35.9</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>EMP</def>
+					<amount>1</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 	<RecipeDef ParentName="AmmoRecipeBase">

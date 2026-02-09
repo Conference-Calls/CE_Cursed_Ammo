@@ -32,7 +32,10 @@ VARIANT_CONFIGS = {
         "label": "consecrated silver",
         "label_short": "Consecrated",
         "texture_suffix": "EAC_Silver",
-        "damage_type": "Disintegrate"  # Change to Disintegrate
+        "secondary_damage": {
+            "def": "EMP",
+            "amount": 1
+        }
     }
 }
 
@@ -222,16 +225,47 @@ def create_cursed_ammo_variant(
             except (ValueError, TypeError):
                 pass
         
-        # Update damage type if needed
-        damage_def_elem = projectile.find('damageDef')
-        if damage_def_elem is not None and config['damage_type'] != "Bullet":
-            damage_def_elem.text = config['damage_type']
+        # Update damage type if configured
+        if 'damage_type' in config:
+            damage_def_elem = projectile.find('damageDef')
+            if damage_def_elem is None:
+                # Create damageDef element if it doesn't exist
+                # Insert it right after damageAmountBase for proper ordering
+                damage_def_elem = ET.Element('damageDef')
+                damage_def_elem.text = config['damage_type']
+                # Find position after damageAmountBase
+                children = list(projectile)
+                insert_pos = len(children)
+                for i, child in enumerate(children):
+                    if child.tag == 'damageAmountBase':
+                        insert_pos = i + 1
+                        break
+                projectile.insert(insert_pos, damage_def_elem)
+            else:
+                damage_def_elem.text = config['damage_type']
         
-        # For EAC_Silver: remove secondary damage and ensure primary damage is Disintegrate
-        if variant_key == "Silver":
+        # For EAC_Silver: remove existing secondary damage and add EMP damage
+        if variant_key == "EAC_Silver":
+            # Remove any existing secondary damage
             secondary_damage = projectile.find('secondaryDamage')
             if secondary_damage is not None:
                 projectile.remove(secondary_damage)
+            
+            # Add EMP secondary damage if configured
+            if 'secondary_damage' in config:
+                secondary_elem = ET.Element('secondaryDamage')
+                li_elem = ET.Element('li')
+                
+                def_elem = ET.Element('def')
+                def_elem.text = config['secondary_damage']['def']
+                li_elem.append(def_elem)
+                
+                amount_elem = ET.Element('amount')
+                amount_elem.text = str(config['secondary_damage']['amount'])
+                li_elem.append(amount_elem)
+                
+                secondary_elem.append(li_elem)
+                projectile.append(secondary_elem)
     
     # Create cursed recipe definition
     cursed_recipe = deep_copy_element(ap_recipe)
