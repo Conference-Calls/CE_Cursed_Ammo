@@ -25,6 +25,18 @@ def try_deeprm_attr(obj, key):
         for item in obj:
             try_deeprm_attr(item, key)
 
+def try_deeprm_attr_with_property(obj, property):
+    if not isinstance(obj, (dict, list)):
+        return
+    if isinstance(obj, dict):
+        if "ThingDef" in obj.keys() and property in obj["ThingDef"][0].keys():
+            del obj["ThingDef"]
+        for v in obj.values():
+            try_deeprm_attr_with_property(v, property)
+    elif isinstance(obj, list):
+        for item in obj:
+            try_deeprm_attr_with_property(item, property)
+
 def main():
     for root, dirs, files in os.walk("."):
         for file in files:
@@ -32,8 +44,7 @@ def main():
                 try:
                     with open(os.path.join(root, file), "r") as f:
                         data = xmltodict.parse(f.read())
-                        try_deeprm_attr(data, "ThingCategoryDef")
-                        try_deeprm_attr(data, "CombatExtended.AmmoSetDef")
+                        try_deeprm_attr_with_property(data, "@Abstract")
                     with open(os.path.join(root, file), "w") as f:
                         f.write(xmltodict.unparse(data, pretty=True))
                 except Exception as e:
