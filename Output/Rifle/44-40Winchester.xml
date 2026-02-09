@@ -4,7 +4,7 @@
 		<defName>Ammo_44-40Winchester_EAC_Bioferrite</defName>
 		<label>44-40Winchester (Bioferrite)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Clip/EAC_Bioferrite</texPath>
+			<texPath>Things/Ammo/Rifle/EAC_Bioferrite</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<ammoClass>EAC_Bioferrite</ammoClass>
@@ -74,7 +74,7 @@
 		<defName>Ammo_44-40Winchester_EAC_Silver</defName>
 		<label>44-40Winchester (Consecrated)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Clip/EAC_Silver</texPath>
+			<texPath>Things/Ammo/Rifle/EAC_Silver</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<ammoClass>EAC_Silver</ammoClass>

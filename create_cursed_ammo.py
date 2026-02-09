@@ -121,7 +121,8 @@ def create_cursed_ammo_variant(
     root: ET.Element,
     ammo_type: str,
     variant_key: str,
-    config: Dict
+    config: Dict,
+    ammo_folder: str = "Rifle"
 ) -> Tuple[Optional[ET.Element], Optional[ET.Element], Optional[ET.Element]]:
     """Create cursed ammo variants (ammo def, bullet def, recipe) from AP types."""
     
@@ -173,12 +174,9 @@ def create_cursed_ammo_variant(
     # Update texture path
     graphic_elem = cursed_ammo.find('.//graphicData/texPath')
     if graphic_elem is not None:
-        # Replace the texture path to use the variant suffix
-        if graphic_elem.text:
-            # Replace the last part with the new suffix
-            parts = graphic_elem.text.split('/')
-            parts[-1] = config['texture_suffix']
-            graphic_elem.text = '/'.join(parts)
+        # Build the texture path using the ammo folder from the file location
+        # and the variant texture suffix
+        graphic_elem.text = f"Things/Ammo/{ammo_folder}/{config['texture_suffix']}"
     
     # Create cursed bullet definition
     cursed_bullet = deep_copy_element(ap_bullet)
@@ -425,6 +423,10 @@ def process_input_file(input_path: str, output_dir: str) -> Optional[Tuple[str, 
         filename = os.path.basename(input_path)
         ammo_type = get_ammo_caliber_name(filename)
         
+        # Get the ammo folder from the input file path (e.g., "Rifle", "Pistol", "HighCaliber")
+        input_file_path = Path(input_path)
+        ammo_folder = input_file_path.parent.name
+        
         # Get ammo set information for patch generation
         ammo_set_info = get_ammo_set_info(root, ammo_type)
         
@@ -434,7 +436,7 @@ def process_input_file(input_path: str, output_dir: str) -> Optional[Tuple[str, 
         # Try to create each variant
         for variant_key, config in VARIANT_CONFIGS.items():
             cursed_ammo, cursed_bullet, cursed_recipe = create_cursed_ammo_variant(
-                root, ammo_type, variant_key, config
+                root, ammo_type, variant_key, config, ammo_folder
             )
             
             if cursed_ammo is not None:

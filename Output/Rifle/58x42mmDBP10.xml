@@ -4,7 +4,7 @@
 		<defName>Ammo_58x42mmDBP10_EAC_Bioferrite</defName>
 		<label>58x42mmDBP10 (Bioferrite)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Soviet/EAC_Bioferrite</texPath>
+			<texPath>Things/Ammo/Rifle/EAC_Bioferrite</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<ammoClass>EAC_Bioferrite</ammoClass>
@@ -74,7 +74,7 @@
 		<defName>Ammo_58x42mmDBP10_EAC_Silver</defName>
 		<label>58x42mmDBP10 (Consecrated)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Soviet/EAC_Silver</texPath>
+			<texPath>Things/Ammo/Rifle/EAC_Silver</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<ammoClass>EAC_Silver</ammoClass>

@@ -4,7 +4,7 @@
 		<defName>Ammo_792x57mmMauser_EAC_Bioferrite</defName>
 		<label>7.92x57mmMauser (Bioferrite)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Clip/EAC_Bioferrite</texPath>
+			<texPath>Things/Ammo/Rifle/EAC_Bioferrite</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<ammoClass>EAC_Bioferrite</ammoClass>
@@ -74,7 +74,7 @@
 		<defName>Ammo_792x57mmMauser_EAC_Silver</defName>
 		<label>7.92x57mmMauser (Consecrated)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Clip/EAC_Silver</texPath>
+			<texPath>Things/Ammo/Rifle/EAC_Silver</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<ammoClass>EAC_Silver</ammoClass>

@@ -4,7 +4,7 @@
 		<defName>Ammo_485x49mm_EAC_Bioferrite</defName>
 		<label>485x49mm (Bioferrite)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Battlerifle/EAC_Bioferrite</texPath>
+			<texPath>Things/Ammo/Rifle/EAC_Bioferrite</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<ammoClass>EAC_Bioferrite</ammoClass>
@@ -74,7 +74,7 @@
 		<defName>Ammo_485x49mm_EAC_Silver</defName>
 		<label>485x49mm (Consecrated)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/Battlerifle/EAC_Silver</texPath>
+			<texPath>Things/Ammo/Rifle/EAC_Silver</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<ammoClass>EAC_Silver</ammoClass>
