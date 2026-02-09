@@ -29,8 +29,8 @@ def try_deeprm_attr_with_property(obj, property):
     if not isinstance(obj, (dict, list)):
         return
     if isinstance(obj, dict):
-        if "ThingDef" in obj.keys() and property in obj["ThingDef"][0].keys():
-            del obj["ThingDef"]
+        if "ThingDef" in obj.keys() and isinstance(obj["ThingDef"], list):
+            obj["ThingDef"] = [thing for thing in obj["ThingDef"] if thing.get(property) != "True"]
         for v in obj.values():
             try_deeprm_attr_with_property(v, property)
     elif isinstance(obj, list):
