@@ -520,6 +520,22 @@ def generate_patch_file(ammo_set_infos: List[Tuple[str, str]], output_base_dir: 
     print(f"[OK] Generated patch file: {patch_path}")
 
 
+def create_texture_folders(workspace_root: Path, ammo_folders: set) -> None:
+    """Create texture folders for all variants in all ammo types.
+    
+    Args:
+        workspace_root: Root path of the workspace
+        ammo_folders: Set of ammo folder names (e.g., {'Rifle', 'Pistol'})
+    """
+    texture_base = workspace_root / "Textures" / "Things" / "Ammo"
+    
+    for ammo_folder in ammo_folders:
+        for variant_key, config in VARIANT_CONFIGS.items():
+            texture_path = texture_base / ammo_folder / config['texture_suffix']
+            texture_path.mkdir(parents=True, exist_ok=True)
+            print(f"[OK] Created texture folder: {texture_path}")
+
+
 def indent_tree(elem, level=0):
     """Add pretty-printing indentation to XML tree."""
     indent = "\n" + level * "\t"
@@ -563,6 +579,17 @@ def main():
         return
     
     print(f"Found {len(xml_files)} ammo files to process\n")
+    
+    # Collect unique ammo folders from the input files
+    ammo_folders = set()
+    for input_file in xml_files:
+        ammo_folder = input_file.parent.name
+        ammo_folders.add(ammo_folder)
+    
+    # Create texture folders for all variants
+    print("Creating texture folders...")
+    create_texture_folders(workspace_root, ammo_folders)
+    print()
     
     # Collect ammo set information for patch file generation
     ammo_set_infos = []
