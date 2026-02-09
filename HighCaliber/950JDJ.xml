@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo950JDJBase">
 		<defName>Ammo_50JDJ_BFR</defName>
 		<label>.950 JDJ (Bioferrite)</label>
@@ -8,11 +7,10 @@
 			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_50JDJ_BFR</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base950JDJBullet">
 		<defName>Bullet_50JDJ_BFR</defName>
 		<label>.950 JDJ bullet (Bioferrite)</label>
@@ -28,7 +26,6 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_50JDJ_BFR</defName>
 		<label>make .950 JDJ (Bioferrite) cartridge x200</label>
@@ -63,5 +60,4 @@
 		</products>
 		<workAmount>22600</workAmount>
 	</RecipeDef>
-
 </Defs>

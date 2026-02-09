@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<ThingDef Class="CombatExtended.AmmoDef" ParentName="762x51mmNATOBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="762x51mmNATOBase">
 		<defName>Ammo_762x51mmNATO_BFR</defName>
 		<label>7.62x51mm NATO (Bioferrite)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/Battlerifle/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_762x51mmNATO_BFR</cookOffProjectile>
 	</ThingDef>
-
-<ThingDef ParentName="Base762x51mmNATOBullet">
+	<ThingDef ParentName="Base762x51mmNATOBullet">
 		<defName>Bullet_762x51mmNATO_BFR</defName>
 		<label>7.62mm NATO bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -28,7 +26,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-<ThingDef ParentName="Base762x51mmNATOBullet">
+	<ThingDef ParentName="Base762x51mmNATOBullet">
 		<defName>Bullet_762x51mmNATO_BFR_SB</defName>
 		<label>7.62mm NATO bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -44,7 +42,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_762x51mmNATO_BFR</defName>
 		<label>make 7.62x51mm NATO (Bioferrite) cartridge x500</label>
 		<description>Craft 500 7.62x51mm NATO (Bioferrite) cartridges.</description>
@@ -78,5 +76,4 @@
 		</products>
 		<workAmount>3800</workAmount>
 	</RecipeDef>
-
 </Defs>

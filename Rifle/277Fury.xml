@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<ThingDef Class="CombatExtended.AmmoDef" ParentName="277FuryBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="277FuryBase">
 		<defName>Ammo_277Fury_BFR</defName>
 		<label>.277 Fury (Bioferrite)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/Battlerifle/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_277Fury_BFR</cookOffProjectile>
 	</ThingDef>
-
-<ThingDef ParentName="Base277FuryBullet">
+	<ThingDef ParentName="Base277FuryBullet">
 		<defName>Bullet_277Fury_BFR</defName>
 		<label>.277 Fury bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -28,8 +26,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-
-<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_277Fury_BFR</defName>
 		<label>make .277 Fury (Bioferrite) cartridge x500</label>
 		<description>Craft 500 .277 Fury (Bioferrite) cartridges.</description>
@@ -63,5 +60,4 @@
 		</products>
 		<workAmount>3800</workAmount>
 	</RecipeDef>
-
 </Defs>

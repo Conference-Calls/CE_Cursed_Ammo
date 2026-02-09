@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<ThingDef Class="CombatExtended.AmmoDef" ParentName="458SOCOMBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="458SOCOMBase">
 		<defName>Ammo_458SOCOM_BFR</defName>
 		<label>.458 SOCOM (Bioferrite)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_458SOCOM_BFR</cookOffProjectile>
 	</ThingDef>
-
-<ThingDef ParentName="Base458SOCOMBullet">
+	<ThingDef ParentName="Base458SOCOMBullet">
 		<defName>Bullet_458SOCOM_BFR</defName>
 		<label>.458 SOCOM bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -28,8 +26,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-
-<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_458SOCOM_BFR</defName>
 		<label>make .458 SOCOM (Bioferrite) cartridge x500</label>
 		<description>Craft 500 .458 SOCOM (Bioferrite) cartridges.</description>
@@ -63,5 +60,4 @@
 		</products>
 		<workAmount>5400</workAmount>
 	</RecipeDef>
-
 </Defs>

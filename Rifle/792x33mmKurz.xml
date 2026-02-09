@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<ThingDef Class="CombatExtended.AmmoDef" ParentName="792x33mmKurzBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="792x33mmKurzBase">
 		<defName>Ammo_792x33mmKurz_BFR</defName>
 		<label>7.92x33mm Kurz (Bioferrite)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_792x33mmKurz_BFR</cookOffProjectile>
 	</ThingDef>
-
-<ThingDef ParentName="Base792x33mmKurzBullet">
+	<ThingDef ParentName="Base792x33mmKurzBullet">
 		<defName>Bullet_792x33mmKurz_BFR</defName>
 		<label>7.92mm Kurz bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -28,8 +26,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-
-<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_792x33mmKurz_BFR</defName>
 		<label>make 7.92x33mm Kurz (Bioferrite) cartridge x500</label>
 		<description>Craft 500 7.92x33mm Kurz (Bioferrite) cartridges.</description>
@@ -63,5 +60,4 @@
 		</products>
 		<workAmount>2800</workAmount>
 	</RecipeDef>
-
 </Defs>

@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<ThingDef Class="CombatExtended.AmmoDef" ParentName="4570GovBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="4570GovBase">
 		<defName>Ammo_4570Gov_BFR</defName>
 		<label>.45-70 Government (Bioferrite)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/Clip/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_4570Gov_BFR</cookOffProjectile>
 	</ThingDef>
-
-<ThingDef ParentName="Base4570GovBullet">
+	<ThingDef ParentName="Base4570GovBullet">
 		<defName>Bullet_4570Gov_BFR</defName>
 		<label>.45-70 bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -28,7 +26,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-<ThingDef ParentName="Base4570GovBullet">
+	<ThingDef ParentName="Base4570GovBullet">
 		<defName>Bullet_4570Gov_BFR_SB</defName>
 		<label>.45-70 bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -44,7 +42,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_4570Gov_BFR</defName>
 		<label>make .45-70 Government (Bioferrite) cartridge x500</label>
 		<description>Craft 500 .45-70 Government (Bioferrite) cartridges.</description>
@@ -78,5 +76,4 @@
 		</products>
 		<workAmount>5800</workAmount>
 	</RecipeDef>
-
 </Defs>

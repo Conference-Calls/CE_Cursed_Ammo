@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<ThingDef Class="CombatExtended.AmmoDef" ParentName="50BeowulfBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="50BeowulfBase">
 		<defName>Ammo_50Beowulf_BFR</defName>
 		<label>.50 Beowulf (Bioferrite)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_50Beowulf_BFR</cookOffProjectile>
 	</ThingDef>
-
-<ThingDef ParentName="Base50BeowulfBullet">
+	<ThingDef ParentName="Base50BeowulfBullet">
 		<defName>Bullet_50Beowulf_BFR</defName>
 		<label>.50 Beowulf bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -28,8 +26,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-
-<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_50Beowulf_BFR</defName>
 		<label>make .50 Beowulf (Bioferrite) cartridge x500</label>
 		<description>Craft 500 .50 Beowulf (Bioferrite) cartridges.</description>
@@ -63,5 +60,4 @@
 		</products>
 		<workAmount>6000</workAmount>
 	</RecipeDef>
-
 </Defs>

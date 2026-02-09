@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<ThingDef Class="CombatExtended.AmmoDef" ParentName="30CarbineBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="30CarbineBase">
 		<defName>Ammo_30Carbine_BFR</defName>
 		<label>.30 Carbine (Bioferrite)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/Clip/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_30Carbine_BFR</cookOffProjectile>
 	</ThingDef>
-
-<ThingDef ParentName="Base30CarbineBullet">
+	<ThingDef ParentName="Base30CarbineBullet">
 		<defName>Bullet_30Carbine_BFR</defName>
 		<label>.30 Carbine bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -28,7 +26,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-<ThingDef ParentName="Base30CarbineBullet">
+	<ThingDef ParentName="Base30CarbineBullet">
 		<defName>Bullet_30Carbine_BFR_SB</defName>
 		<label>.30 Carbine bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -44,7 +42,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_30Carbine_BFR</defName>
 		<label>make .30 Carbine (Bioferrite) cartridge x500</label>
 		<description>Craft 500 .30 Carbine (Bioferrite) cartridges.</description>
@@ -78,5 +76,4 @@
 		</products>
 		<workAmount>2200</workAmount>
 	</RecipeDef>
-
 </Defs>

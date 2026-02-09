@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<ThingDef Class="CombatExtended.AmmoDef" ParentName="280BritishBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="280BritishBase">
 		<defName>Ammo_280British_BFR</defName>
 		<label>.280 British (Bioferrite)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/Battlerifle/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_280British_BFR</cookOffProjectile>
 	</ThingDef>
-
-<ThingDef ParentName="Base280BritishBullet">
+	<ThingDef ParentName="Base280BritishBullet">
 		<defName>Bullet_280British_BFR</defName>
 		<label>.280 British bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -28,8 +26,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-
-<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_280British_BFR</defName>
 		<label>make .280 British (Bioferrite) cartridge x500</label>
 		<description>Craft 500 .280 British (Bioferrite) cartridges.</description>
@@ -63,5 +60,4 @@
 		</products>
 		<workAmount>3600</workAmount>
 	</RecipeDef>
-
 </Defs>

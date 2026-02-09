@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo132x92mmSRTuFBase">
 		<defName>Ammo_132x92mmSRTuF_BFR</defName>
 		<label>13.2x92mmSR TuF (Bioferrite)</label>
@@ -8,11 +7,10 @@
 			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_132x92mmSRTuF_BFR</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef ParentName="Base132x92mmSRTuFBullet">
 		<defName>Bullet_132x92mmSRTuF_BFR</defName>
 		<label>13.2x92mmSR TuF bullet (Bioferrite)</label>
@@ -28,7 +26,6 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_132x92mmSRTuF_BFR</defName>
 		<label>make 13.2x92mmSR TuF (Bioferrite) cartridge x200</label>
@@ -63,5 +60,4 @@
 		</products>
 		<workAmount>8200</workAmount>
 	</RecipeDef>
-
 </Defs>

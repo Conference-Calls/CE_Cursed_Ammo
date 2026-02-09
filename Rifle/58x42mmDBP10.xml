@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<ThingDef Class="CombatExtended.AmmoDef" ParentName="58x42mmDBP10Base">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="58x42mmDBP10Base">
 		<defName>Ammo_58x42mmDBP10_BFR</defName>
 		<label>5.8x42mm DBP10 (Bioferrite)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/Soviet/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_58x42mmDBP10_BFR</cookOffProjectile>
 	</ThingDef>
-
-<ThingDef ParentName="Base58x42mmDBP10Bullet">
+	<ThingDef ParentName="Base58x42mmDBP10Bullet">
 		<defName>Bullet_58x42mmDBP10_BFR</defName>
 		<label>5.8mm DBP10 bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -28,8 +26,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-
-<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_58x42mmDBP10_BFR</defName>
 		<label>make 5.8x42mm DBP10 (Bioferrite) cartridge x500</label>
 		<description>Craft 500 5.8x42mm DBP10 (Bioferrite) cartridges.</description>
@@ -63,5 +60,4 @@
 		</products>
 		<workAmount>2600</workAmount>
 	</RecipeDef>
-
 </Defs>

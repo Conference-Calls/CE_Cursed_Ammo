@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<ThingDef Class="CombatExtended.AmmoDef" ParentName="545x39mmSovietBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="545x39mmSovietBase">
 		<defName>Ammo_545x39mmSoviet_BFR</defName>
 		<label>5.45x39mm Soviet (Bioferrite)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/Soviet/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_545x39mmSoviet_BFR</cookOffProjectile>
 	</ThingDef>
-
-<ThingDef ParentName="Base545x39mmSovietBullet">
+	<ThingDef ParentName="Base545x39mmSovietBullet">
 		<defName>Bullet_545x39mmSoviet_BFR</defName>
 		<label>5.45mm Soviet bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -28,7 +26,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-<ThingDef ParentName="Base545x39mmSovietBullet">
+	<ThingDef ParentName="Base545x39mmSovietBullet">
 		<defName>Bullet_545x39mmSoviet_BFR_SB</defName>
 		<label>5.45mm Soviet bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -44,7 +42,7 @@
 			<speed>142</speed>
 		</projectile>
 	</ThingDef>
-<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_545x39mmSoviet_BFR</defName>
 		<label>make 5.45x39mm Soviet (Bioferrite) cartridge x500</label>
 		<description>Craft 500 5.45x39mm Soviet (Bioferrite) cartridges.</description>
@@ -78,5 +76,4 @@
 		</products>
 		<workAmount>1600</workAmount>
 	</RecipeDef>
-
 </Defs>

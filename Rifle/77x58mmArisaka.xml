@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<ThingDef Class="CombatExtended.AmmoDef" ParentName="77x58mmArisakaBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="77x58mmArisakaBase">
 		<defName>Ammo_77x58mmArisaka_BFR</defName>
 		<label>7.7x58mm Arisaka (Bioferrite)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/Clip/Incendiary</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<ammoClass>Bioferrite</ammoClass>
-		<generateAllowChance>0</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<ammoClass>EAC_Bioferrite</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
 		<cookOffProjectile>Bullet_77x58mmArisaka_BFR</cookOffProjectile>
 	</ThingDef>
-
-<ThingDef ParentName="Base75x54mmFrenchBullet">
+	<ThingDef ParentName="Base75x54mmFrenchBullet">
 		<defName>Bullet_77x58mmArisaka_BFR</defName>
 		<label>7.7x58mm Arisaka bullet (Bioferrite)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -28,8 +26,7 @@
 			</secondaryDamage>
 		</projectile>
 	</ThingDef>
-
-<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_77x58mmArisaka_BFR</defName>
 		<label>make 7.7x58mm Arisaka (Bioferrite) cartridge x500</label>
 		<description>Craft 500 7.7x58mm Arisaka (Bioferrite) cartridges.</description>
@@ -63,5 +60,4 @@
 		</products>
 		<workAmount>4200</workAmount>
 	</RecipeDef>
-
 </Defs>

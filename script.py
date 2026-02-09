@@ -18,9 +18,10 @@ def main():
         for file in files:
             if file.endswith(".xml"):
                 try:
-                    with open(os.path.join(root, file), "r+") as f:
+                    with open(os.path.join(root, file), "r") as f:
                         data = xmltodict.parse(f.read())
                         try_deepset_attr(data, "ammoClass", "EAC_Bioferrite")
+                    with open(os.path.join(root, file), "w") as f:
                         f.write(xmltodict.unparse(data, pretty=True))
                 except Exception as e:
                     print(f"Failed to process {file}: {e}")
