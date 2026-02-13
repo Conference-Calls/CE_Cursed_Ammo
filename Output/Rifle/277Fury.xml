@@ -84,9 +84,9 @@
 		<defName>Bullet_277Fury_EAC_Silver</defName>
 		<label>.277 Fury bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>10</damageAmountBase>
+			<damageAmountBase>11</damageAmountBase>
 			<armorPenetrationSharp>9</armorPenetrationSharp>
-			<armorPenetrationBlunt>73.1</armorPenetrationBlunt>
+			<armorPenetrationBlunt>67.25</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>25</amount>
+					<amount>28</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

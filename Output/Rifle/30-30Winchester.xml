@@ -84,9 +84,9 @@
 		<defName>Bullet_3030Winchester_EAC_Silver</defName>
 		<label>.30-30 Winchester cartridge (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>9</damageAmountBase>
+			<damageAmountBase>10</damageAmountBase>
 			<armorPenetrationSharp>6</armorPenetrationSharp>
-			<armorPenetrationBlunt>52.18</armorPenetrationBlunt>
+			<armorPenetrationBlunt>48.01</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>22</amount>
+					<amount>25</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

@@ -84,9 +84,9 @@
 		<defName>Bullet_30Carbine_EAC_Silver</defName>
 		<label>.30 Carbine bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>7</damageAmountBase>
+			<damageAmountBase>8</damageAmountBase>
 			<armorPenetrationSharp>6</armorPenetrationSharp>
-			<armorPenetrationBlunt>25.74</armorPenetrationBlunt>
+			<armorPenetrationBlunt>23.68</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>18</amount>
+					<amount>20</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

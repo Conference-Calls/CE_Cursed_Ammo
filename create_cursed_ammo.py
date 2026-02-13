@@ -9,6 +9,7 @@ import shutil
 # Configuration for variant creation
 # New keys supported per-variant:
 #  - enabled: bool (default True) — whether to generate this variant
+#  - blunt_penetration_modifier: multiplier or absolute (see code) — affects <armorPenetrationBlunt>
 #  - damage_types: see below for primary/secondary usage
 # `damage_types` can be either a flat dict (treated as secondary damages)
 #    e.g. {'EMP': 0.25, 'Fire': 0.5}
@@ -20,6 +21,7 @@ VARIANT_CONFIGS = {
         "base_ammo_class": "IncendiaryAP",  # Based on AP-I (IncendiaryAP)
         "sharp_penetration_modifier": 1.5,  # Increase by 50%
         "damage_modifier": 1,  # Reduce by 20%
+        "blunt_penetration_modifier": 1.0,
         "recipe_materials": {
             "Bioferrite": 0.4,
             "Uranium": 0.4,
@@ -37,7 +39,8 @@ VARIANT_CONFIGS = {
         "enabled": True,
         "base_ammo_class": "ArmorPiercing",  # Based on AP
         "sharp_penetration_modifier": 0.6,  # Set to 999999
-        "damage_modifier": 0.8,  # Double damage
+        "damage_modifier": 0.9,
+        "blunt_penetration_modifier": 0.92,
         "recipe_materials": {
             "Silver": 10.0,
             "Steel": 0.1,
@@ -216,13 +219,31 @@ def create_cursed_ammo_variant(
         if penetration_elem is not None:
             try:
                 old_value = float(penetration_elem.text)
-                # For Silver variant, set to 999999 directly; for others, multiply
-                if config['sharp_penetration_modifier'] >= 1000:  # Silver variant
+                # For Silver variant a very large modifier can be used to set an absolute value;
+                # otherwise treat as multiplier (round to int for sharp AP).
+                if config.get('sharp_penetration_modifier', 1) >= 1000:
                     new_value = config['sharp_penetration_modifier']
                 else:
-                    new_value = old_value * config['sharp_penetration_modifier']
+                    new_value = old_value * config.get('sharp_penetration_modifier', 1)
                     new_value = round(new_value)
                 penetration_elem.text = str(int(new_value))
+            except (ValueError, TypeError):
+                pass
+
+        # Update blunt penetration (new: supports blunt_penetration_modifier)
+        blunt_elem = projectile.find('armorPenetrationBlunt')
+        if blunt_elem is not None and 'blunt_penetration_modifier' in config:
+            try:
+                old_blunt = float(blunt_elem.text)
+                bm = config.get('blunt_penetration_modifier', 1.0)
+                # if user supplies a very large number treat it as absolute value; otherwise multiply
+                if isinstance(bm, (int, float)) and bm >= 1000:
+                    new_blunt = float(bm)
+                else:
+                    new_blunt = old_blunt * float(bm)
+                # keep two decimal precision (trim trailing zeros)
+                new_text = f"{round(new_blunt, 2):.2f}".rstrip('0').rstrip('.')
+                blunt_elem.text = new_text
             except (ValueError, TypeError):
                 pass
         

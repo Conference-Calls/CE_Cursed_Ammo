@@ -84,9 +84,9 @@
 		<defName>Bullet_5656Spencer_EAC_Silver</defName>
 		<label>.56-56 Spencer bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>9</damageAmountBase>
+			<damageAmountBase>10</damageAmountBase>
 			<armorPenetrationSharp>6</armorPenetrationSharp>
-			<armorPenetrationBlunt>30.36</armorPenetrationBlunt>
+			<armorPenetrationBlunt>27.93</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>22</amount>
+					<amount>25</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

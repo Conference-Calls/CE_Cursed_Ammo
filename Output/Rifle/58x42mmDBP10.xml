@@ -84,9 +84,9 @@
 		<defName>Bullet_58x42mmDBP10_EAC_Silver</defName>
 		<label>5.8mm DBP10 bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>7</damageAmountBase>
+			<damageAmountBase>8</damageAmountBase>
 			<armorPenetrationSharp>7</armorPenetrationSharp>
-			<armorPenetrationBlunt>35.9</armorPenetrationBlunt>
+			<armorPenetrationBlunt>33.03</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>18</amount>
+					<amount>20</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

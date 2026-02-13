@@ -14,9 +14,9 @@
 		<defName>Bullet_17HMR_EAC_Silver</defName>
 		<label>.17 HMR bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>3</damageAmountBase>
+			<damageAmountBase>4</damageAmountBase>
 			<armorPenetrationSharp>4</armorPenetrationSharp>
-			<armorPenetrationBlunt>6.44</armorPenetrationBlunt>
+			<armorPenetrationBlunt>5.92</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -24,7 +24,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>8</amount>
+					<amount>10</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

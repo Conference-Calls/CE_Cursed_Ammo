@@ -84,9 +84,9 @@
 		<defName>Bullet_8x50mmRMannlicher_EAC_Silver</defName>
 		<label>8x50mmR Mannlicher bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>10</damageAmountBase>
+			<damageAmountBase>11</damageAmountBase>
 			<armorPenetrationSharp>7</armorPenetrationSharp>
-			<armorPenetrationBlunt>55.74</armorPenetrationBlunt>
+			<armorPenetrationBlunt>51.28</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>25</amount>
+					<amount>28</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

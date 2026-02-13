@@ -84,9 +84,9 @@
 		<defName>Bullet_77x58mmArisaka_EAC_Silver</defName>
 		<label>7.7x58mm Arisaka bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>10</damageAmountBase>
+			<damageAmountBase>11</damageAmountBase>
 			<armorPenetrationSharp>8</armorPenetrationSharp>
-			<armorPenetrationBlunt>60.24</armorPenetrationBlunt>
+			<armorPenetrationBlunt>55.42</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>25</amount>
+					<amount>28</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

@@ -84,9 +84,9 @@
 		<defName>Bullet_556x45mmNATO_EAC_Silver</defName>
 		<label>5.56mm NATO bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>7</damageAmountBase>
+			<damageAmountBase>8</damageAmountBase>
 			<armorPenetrationSharp>7</armorPenetrationSharp>
-			<armorPenetrationBlunt>34.18</armorPenetrationBlunt>
+			<armorPenetrationBlunt>31.45</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>18</amount>
+					<amount>20</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

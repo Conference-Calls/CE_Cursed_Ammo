@@ -84,9 +84,9 @@
 		<defName>Bullet_243Winchester_EAC_Silver</defName>
 		<label>.243 Winchester bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>8</damageAmountBase>
+			<damageAmountBase>9</damageAmountBase>
 			<armorPenetrationSharp>8</armorPenetrationSharp>
-			<armorPenetrationBlunt>50.7</armorPenetrationBlunt>
+			<armorPenetrationBlunt>46.64</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>20</amount>
+					<amount>22</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

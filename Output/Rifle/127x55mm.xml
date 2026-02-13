@@ -24,7 +24,7 @@
 				</li>
 			</secondaryDamage>
 			<armorPenetrationSharp>21</armorPenetrationSharp>
-			<armorPenetrationBlunt>51.340</armorPenetrationBlunt>
+			<armorPenetrationBlunt>51.34</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
@@ -84,9 +84,9 @@
 		<defName>Bullet_127x55mm_EAC_Silver</defName>
 		<label>12.7mm bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>10</damageAmountBase>
+			<damageAmountBase>12</damageAmountBase>
 			<armorPenetrationSharp>8</armorPenetrationSharp>
-			<armorPenetrationBlunt>51.340</armorPenetrationBlunt>
+			<armorPenetrationBlunt>47.23</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>25</amount>
+					<amount>30</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

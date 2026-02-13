@@ -84,9 +84,9 @@
 		<defName>Bullet_50Beowulf_EAC_Silver</defName>
 		<label>.50 Beowulf bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>11</damageAmountBase>
+			<damageAmountBase>13</damageAmountBase>
 			<armorPenetrationSharp>8</armorPenetrationSharp>
-			<armorPenetrationBlunt>63.28</armorPenetrationBlunt>
+			<armorPenetrationBlunt>58.22</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>28</amount>
+					<amount>32</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

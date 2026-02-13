@@ -84,9 +84,9 @@
 		<defName>Bullet_458SOCOM_EAC_Silver</defName>
 		<label>.458 SOCOM bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>11</damageAmountBase>
+			<damageAmountBase>13</damageAmountBase>
 			<armorPenetrationSharp>8</armorPenetrationSharp>
-			<armorPenetrationBlunt>65.26</armorPenetrationBlunt>
+			<armorPenetrationBlunt>60.04</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>28</amount>
+					<amount>32</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>

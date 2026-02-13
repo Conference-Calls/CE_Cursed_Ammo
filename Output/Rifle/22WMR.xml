@@ -16,7 +16,7 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>4</damageAmountBase>
 			<armorPenetrationSharp>4</armorPenetrationSharp>
-			<armorPenetrationBlunt>8.5</armorPenetrationBlunt>
+			<armorPenetrationBlunt>7.82</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>

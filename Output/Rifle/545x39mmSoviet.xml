@@ -84,9 +84,9 @@
 		<defName>Bullet_545x39mmSoviet_EAC_Silver</defName>
 		<label>5.45mm Soviet bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>6</damageAmountBase>
+			<damageAmountBase>7</damageAmountBase>
 			<armorPenetrationSharp>7</armorPenetrationSharp>
-			<armorPenetrationBlunt>28.04</armorPenetrationBlunt>
+			<armorPenetrationBlunt>25.8</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
@@ -94,7 +94,7 @@
 				</li>
 				<li>
 					<def>Psychic</def>
-					<amount>15</amount>
+					<amount>18</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
