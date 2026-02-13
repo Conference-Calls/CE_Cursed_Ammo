@@ -84,13 +84,17 @@
 		<defName>Bullet_277Fury_EAC_Silver</defName>
 		<label>.277 Fury bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>24</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>9</armorPenetrationSharp>
 			<armorPenetrationBlunt>73.1</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>25</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_277Fury_EAC_Silver</defName>
 		<label>make .277 Fury (Consecrated) cartridge x500</label>
-		<description>Craft 500 .277 Fury (Consecrated) cartridges.</description>
+		<description>Craft 100 .277 Fury (Consecrated) cartridges.</description>
 		<jobString>Making .277 Fury (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_277Fury_EAC_Silver>500</Ammo_277Fury_EAC_Silver>
+			<Ammo_277Fury_EAC_Silver>100</Ammo_277Fury_EAC_Silver>
 		</products>
 		<workAmount>3120</workAmount>
 	</RecipeDef>

@@ -84,13 +84,17 @@
 		<defName>Bullet_58x42mmDBP10_EAC_Silver</defName>
 		<label>5.8mm DBP10 bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>18</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>7</damageAmountBase>
+			<armorPenetrationSharp>7</armorPenetrationSharp>
 			<armorPenetrationBlunt>35.9</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>18</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_58x42mmDBP10_EAC_Silver</defName>
 		<label>make 5.8x42mm DBP10 (Consecrated) cartridge x500</label>
-		<description>Craft 500 5.8x42mm DBP10 (Consecrated) cartridges.</description>
+		<description>Craft 100 5.8x42mm DBP10 (Consecrated) cartridges.</description>
 		<jobString>Making 5.8x42mm DBP10 (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_58x42mmDBP10_EAC_Silver>500</Ammo_58x42mmDBP10_EAC_Silver>
+			<Ammo_58x42mmDBP10_EAC_Silver>100</Ammo_58x42mmDBP10_EAC_Silver>
 		</products>
 		<workAmount>2160</workAmount>
 	</RecipeDef>

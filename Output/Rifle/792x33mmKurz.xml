@@ -84,13 +84,17 @@
 		<defName>Bullet_792x33mmKurz_EAC_Silver</defName>
 		<label>7.92mm Kurz bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>20</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationSharp>6</armorPenetrationSharp>
 			<armorPenetrationBlunt>37.54</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>20</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_792x33mmKurz_EAC_Silver</defName>
 		<label>make 7.92x33mm Kurz (Consecrated) cartridge x500</label>
-		<description>Craft 500 7.92x33mm Kurz (Consecrated) cartridges.</description>
+		<description>Craft 100 7.92x33mm Kurz (Consecrated) cartridges.</description>
 		<jobString>Making 7.92x33mm Kurz (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_792x33mmKurz_EAC_Silver>500</Ammo_792x33mmKurz_EAC_Silver>
+			<Ammo_792x33mmKurz_EAC_Silver>100</Ammo_792x33mmKurz_EAC_Silver>
 		</products>
 		<workAmount>2400</workAmount>
 	</RecipeDef>

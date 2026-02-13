@@ -84,13 +84,17 @@
 		<defName>Bullet_127x55mm_EAC_Silver</defName>
 		<label>12.7mm bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>26</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>8</armorPenetrationSharp>
 			<armorPenetrationBlunt>51.340</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>25</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_127x55mm_EAC_Silver</defName>
 		<label>make 12.7x55mm (Consecrated) cartridge x500</label>
-		<description>Craft 500 12.7x55mm (Consecrated) cartridges.</description>
+		<description>Craft 100 12.7x55mm (Consecrated) cartridges.</description>
 		<jobString>Making 12.7x55mm (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_127x55mm_EAC_Silver>500</Ammo_127x55mm_EAC_Silver>
+			<Ammo_127x55mm_EAC_Silver>100</Ammo_127x55mm_EAC_Silver>
 		</products>
 		<workAmount>9840</workAmount>
 	</RecipeDef>

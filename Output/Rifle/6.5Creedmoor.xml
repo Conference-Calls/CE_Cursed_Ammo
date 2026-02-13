@@ -84,13 +84,17 @@
 		<defName>Bullet_65x48mmCreedmoor_EAC_Silver</defName>
 		<label>6.5mm Creedmoor bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>24</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>8</armorPenetrationSharp>
 			<armorPenetrationBlunt>67.34</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>25</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_65x48mmCreedmoor_EAC_Silver</defName>
 		<label>make 6.5mm Creedmoor (Consecrated) cartridge x500</label>
-		<description>Craft 500 6.5mm Creedmoor (Consecrated) cartridges.</description>
+		<description>Craft 100 6.5mm Creedmoor (Consecrated) cartridges.</description>
 		<jobString>Making 6.5mm Creedmoor (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_65x48mmCreedmoor_EAC_Silver>500</Ammo_65x48mmCreedmoor_EAC_Silver>
+			<Ammo_65x48mmCreedmoor_EAC_Silver>100</Ammo_65x48mmCreedmoor_EAC_Silver>
 		</products>
 		<workAmount>2880</workAmount>
 	</RecipeDef>

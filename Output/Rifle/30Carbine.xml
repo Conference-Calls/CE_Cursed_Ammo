@@ -84,13 +84,17 @@
 		<defName>Bullet_30Carbine_EAC_Silver</defName>
 		<label>.30 Carbine bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>18</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>7</damageAmountBase>
+			<armorPenetrationSharp>6</armorPenetrationSharp>
 			<armorPenetrationBlunt>25.74</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>18</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_30Carbine_EAC_Silver</defName>
 		<label>make .30 Carbine (Consecrated) cartridge x500</label>
-		<description>Craft 500 .30 Carbine (Consecrated) cartridges.</description>
+		<description>Craft 100 .30 Carbine (Consecrated) cartridges.</description>
 		<jobString>Making .30 Carbine (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_30Carbine_EAC_Silver>500</Ammo_30Carbine_EAC_Silver>
+			<Ammo_30Carbine_EAC_Silver>100</Ammo_30Carbine_EAC_Silver>
 		</products>
 		<workAmount>1680</workAmount>
 	</RecipeDef>

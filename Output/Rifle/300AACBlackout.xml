@@ -84,13 +84,17 @@
 		<defName>Bullet_300AACBlackout_EAC_Silver</defName>
 		<label>.300 AAC Blackout bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>20</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationSharp>7</armorPenetrationSharp>
 			<armorPenetrationBlunt>36.46</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>20</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_300AACBlackout_EAC_Silver</defName>
 		<label>make .300 AAC Blackout (Consecrated) cartridge x500</label>
-		<description>Craft 500 .300 AAC Blackout (Consecrated) cartridges.</description>
+		<description>Craft 100 .300 AAC Blackout (Consecrated) cartridges.</description>
 		<jobString>Making .300 AAC Blackout (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_300AACBlackout_EAC_Silver>500</Ammo_300AACBlackout_EAC_Silver>
+			<Ammo_300AACBlackout_EAC_Silver>100</Ammo_300AACBlackout_EAC_Silver>
 		</products>
 		<workAmount>1680</workAmount>
 	</RecipeDef>

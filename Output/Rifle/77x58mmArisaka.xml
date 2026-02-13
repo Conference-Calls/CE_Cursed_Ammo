@@ -84,13 +84,17 @@
 		<defName>Bullet_77x58mmArisaka_EAC_Silver</defName>
 		<label>7.7x58mm Arisaka bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>24</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>8</armorPenetrationSharp>
 			<armorPenetrationBlunt>60.24</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>25</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_77x58mmArisaka_EAC_Silver</defName>
 		<label>make 7.7x58mm Arisaka (Consecrated) cartridge x500</label>
-		<description>Craft 500 7.7x58mm Arisaka (Consecrated) cartridges.</description>
+		<description>Craft 100 7.7x58mm Arisaka (Consecrated) cartridges.</description>
 		<jobString>Making 7.7x58mm Arisaka (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_77x58mmArisaka_EAC_Silver>500</Ammo_77x58mmArisaka_EAC_Silver>
+			<Ammo_77x58mmArisaka_EAC_Silver>100</Ammo_77x58mmArisaka_EAC_Silver>
 		</products>
 		<workAmount>3600</workAmount>
 	</RecipeDef>

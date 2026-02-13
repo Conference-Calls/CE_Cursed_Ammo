@@ -84,13 +84,17 @@
 		<defName>Bullet_762x39mmSoviet_EAC_Silver</defName>
 		<label>7.62mm Soviet bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>20</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationSharp>7</armorPenetrationSharp>
 			<armorPenetrationBlunt>41.08</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>20</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_762x39mmSoviet_EAC_Silver</defName>
 		<label>make 7.62x39mm Soviet (Consecrated) cartridge x500</label>
-		<description>Craft 500 7.62x39mm Soviet (Consecrated) cartridges.</description>
+		<description>Craft 100 7.62x39mm Soviet (Consecrated) cartridges.</description>
 		<jobString>Making 7.62x39mm Soviet (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_762x39mmSoviet_EAC_Silver>500</Ammo_762x39mmSoviet_EAC_Silver>
+			<Ammo_762x39mmSoviet_EAC_Silver>100</Ammo_762x39mmSoviet_EAC_Silver>
 		</products>
 		<workAmount>2160</workAmount>
 	</RecipeDef>

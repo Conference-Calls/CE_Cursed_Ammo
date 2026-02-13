@@ -4,13 +4,22 @@ import re
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 import xmltodict
+import shutil
 
 # Configuration for variant creation
+# New keys supported per-variant:
+#  - enabled: bool (default True) — whether to generate this variant
+#  - damage_types: see below for primary/secondary usage
+# `damage_types` can be either a flat dict (treated as secondary damages)
+#    e.g. {'EMP': 0.25, 'Fire': 0.5}
+# or a nested dict with 'primary' and/or 'secondary':
+#    e.g. {'primary': {'Bullet': 1.2}, 'secondary': {'EMP': 0.5}}
 VARIANT_CONFIGS = {
     "EAC_Bioferrite": {
+        "enabled": True,
         "base_ammo_class": "IncendiaryAP",  # Based on AP-I (IncendiaryAP)
         "sharp_penetration_modifier": 1.5,  # Increase by 50%
-        "damage_modifier": 0.8,  # Reduce by 20%
+        "damage_modifier": 1,  # Reduce by 20%
         "recipe_materials": {
             "Bioferrite": 0.4,
             "Uranium": 0.4,
@@ -19,23 +28,28 @@ VARIANT_CONFIGS = {
         "label": "bioferrite penetrator",
         "label_short": "Bioferrite",
         "texture_suffix": "EAC_Bioferrite",
-        "damage_type": "Bullet"  # Remain as Bullet damage
+        "damage_types": {
+            "primary": { "Bullet": 0.8 }
+        },
+        "amount_produced_modifier": 1.0
     },
     "EAC_Silver": {
+        "enabled": True,
         "base_ammo_class": "ArmorPiercing",  # Based on AP
-        "sharp_penetration_modifier": 999999,  # Set to 999999
-        "damage_modifier": 2.0,  # Double damage
+        "sharp_penetration_modifier": 0.6,  # Set to 999999
+        "damage_modifier": 0.8,  # Double damage
         "recipe_materials": {
-            "Silver": 1.0,
+            "Silver": 10.0,
+            "Steel": 0.1,
             "Shard": 1.0  # 1 Shard added
         },
         "label": "consecrated silver",
         "label_short": "Consecrated",
         "texture_suffix": "EAC_Silver",
-        "secondary_damage": {
-            "def": "EMP",
-            "amount": 1
-        }
+        "damage_types": {
+            "secondary": { "EMP": 0.1, "Psychic": 2.5 }
+        },
+        "amount_produced_modifier": 0.2
     }
 }
 
@@ -223,8 +237,85 @@ def create_cursed_ammo_variant(
             except (ValueError, TypeError):
                 pass
         
-        # Update damage type if configured
-        if 'damage_type' in config:
+        # Update damage type(s) if configured.
+        # New: support `damage_types` which can be either a flat dict of
+        #    {DamageDef: multiplier} (treated as secondary damages) or a
+        #    nested dict with optional 'primary' and 'secondary' sub-dicts:
+        #      {'primary': {'Bullet': 1.2}, 'secondary': {'EMP': 0.5}}
+        # Backwards-compatible: `damage_type` (single string) still works.
+        if 'damage_types' in config:
+            dmg_cfg = config['damage_types']
+
+            # get current base damage (after config['damage_modifier'] applied earlier)
+            damage_elem = projectile.find('damageAmountBase')
+            try:
+                base_damage = float(damage_elem.text) if damage_elem is not None else None
+            except (ValueError, TypeError):
+                base_damage = None
+
+            # normalize to primary/secondary dicts
+            primary_cfg = {}
+            secondary_cfg = {}
+            if isinstance(dmg_cfg, dict) and ('primary' in dmg_cfg or 'secondary' in dmg_cfg):
+                primary_cfg = dmg_cfg.get('primary', {}) or {}
+                secondary_cfg = dmg_cfg.get('secondary', {}) or {}
+            elif isinstance(dmg_cfg, dict):
+                # flat dict -> treat as secondary damage entries
+                secondary_cfg = dmg_cfg
+
+            # Apply primary damage override (if provided)
+            if primary_cfg:
+                # use the first entry as the primary damage type
+                for dmg_name, mult in primary_cfg.items():
+                    # set or create damageDef element
+                    damage_def_elem = projectile.find('damageDef')
+                    if damage_def_elem is None:
+                        damage_def_elem = ET.Element('damageDef')
+                        # insert after damageAmountBase for ordering
+                        children = list(projectile)
+                        insert_pos = len(children)
+                        for i, child in enumerate(children):
+                            if child.tag == 'damageAmountBase':
+                                insert_pos = i + 1
+                                break
+                        projectile.insert(insert_pos, damage_def_elem)
+                    damage_def_elem.text = dmg_name
+
+                    # scale primary damageAmountBase by multiplier if possible
+                    if base_damage is not None:
+                        try:
+                            new_val = int(round(base_damage * float(mult)))
+                            damage_elem.text = str(new_val)
+                            base_damage = float(new_val)
+                        except (ValueError, TypeError):
+                            pass
+                    break
+
+            # Apply secondary damage entries (replace existing secondaryDamage)
+            if secondary_cfg and base_damage is not None:
+                existing_sec = projectile.find('secondaryDamage')
+                if existing_sec is not None:
+                    projectile.remove(existing_sec)
+
+                sec_elem = ET.Element('secondaryDamage')
+                for dmg_name, mult in secondary_cfg.items():
+                    try:
+                        amt = int(round(base_damage * float(mult)))
+                    except (ValueError, TypeError):
+                        continue
+                    li = ET.Element('li')
+                    def_e = ET.Element('def')
+                    def_e.text = dmg_name
+                    li.append(def_e)
+                    amt_e = ET.Element('amount')
+                    amt_e.text = str(amt)
+                    li.append(amt_e)
+                    sec_elem.append(li)
+
+                if len(sec_elem):
+                    projectile.append(sec_elem)
+
+        elif 'damage_type' in config:
             damage_def_elem = projectile.find('damageDef')
             if damage_def_elem is None:
                 # Create damageDef element if it doesn't exist
@@ -242,28 +333,27 @@ def create_cursed_ammo_variant(
             else:
                 damage_def_elem.text = config['damage_type']
         
-        # For EAC_Silver: remove existing secondary damage and add EMP damage
-        if variant_key == "EAC_Silver":
-            # Remove any existing secondary damage
-            secondary_damage = projectile.find('secondaryDamage')
-            if secondary_damage is not None:
-                projectile.remove(secondary_damage)
-            
-            # Add EMP secondary damage if configured
-            if 'secondary_damage' in config:
-                secondary_elem = ET.Element('secondaryDamage')
-                li_elem = ET.Element('li')
-                
-                def_elem = ET.Element('def')
-                def_elem.text = config['secondary_damage']['def']
-                li_elem.append(def_elem)
-                
-                amount_elem = ET.Element('amount')
-                amount_elem.text = str(config['secondary_damage']['amount'])
-                li_elem.append(amount_elem)
-                
-                secondary_elem.append(li_elem)
-                projectile.append(secondary_elem)
+        # Backwards-compat for legacy `secondary_damage` config (EAC_Silver)
+        # Do NOT remove any secondaryDamage produced by the generic `damage_types` flow.
+        if variant_key == "EAC_Silver" and 'secondary_damage' in config:
+            # Remove existing secondaryDamage and add the legacy entry
+            existing_sec = projectile.find('secondaryDamage')
+            if existing_sec is not None:
+                projectile.remove(existing_sec)
+
+            secondary_elem = ET.Element('secondaryDamage')
+            li_elem = ET.Element('li')
+
+            def_elem = ET.Element('def')
+            def_elem.text = config['secondary_damage']['def']
+            li_elem.append(def_elem)
+
+            amount_elem = ET.Element('amount')
+            amount_elem.text = str(config['secondary_damage']['amount'])
+            li_elem.append(amount_elem)
+
+            secondary_elem.append(li_elem)
+            projectile.append(secondary_elem)
     
     # Create cursed recipe definition
     cursed_recipe = deep_copy_element(ap_recipe)
@@ -386,17 +476,42 @@ def create_cursed_ammo_variant(
     if products is not None:
         # Get the new ammo name we created
         new_ammo_name = cursed_ammo.find('defName').text
-        
+
         # Find and update the product element
         for product_elem in list(products):
             if product_elem.tag.startswith("Ammo_"):
-                # Store the count
-                count_text = product_elem.text
+                # Store the original count (try parse int)
+                orig_count_text = (product_elem.text or "").strip()
+                try:
+                    orig_count = int(orig_count_text)
+                except Exception:
+                    orig_count = None
+
                 # Remove old element
                 products.remove(product_elem)
+
+                # Compute new produced amount using config (default = orig_count)
+                produced_count = orig_count
+                if produced_count is not None and 'amount_produced_modifier' in config:
+                    try:
+                        produced_count = int(round(produced_count * float(config['amount_produced_modifier'])))
+                    except Exception:
+                        pass
+
                 # Add new element with the cursed ammo name
                 new_product = ET.SubElement(products, new_ammo_name)
-                new_product.text = count_text
+                new_product.text = str(produced_count) if produced_count is not None else orig_count_text
+
+                # Update recipe description to reflect new produced amount (if present)
+                if produced_count is not None:
+                    desc_elem = cursed_recipe.find('description')
+                    if desc_elem is not None and isinstance(desc_elem.text, str):
+                        # Replace leading 'Craft <number>' if present using a callable
+                        # to avoid escape-sequence/backreference issues.
+                        def _replace_count(match):
+                            return f"{match.group(1)}{produced_count}"
+                        desc_elem.text = re.sub(r'(?i)(Craft\s+)\d+', _replace_count, desc_elem.text)
+
                 break
     
     return cursed_ammo, cursed_bullet, cursed_recipe
@@ -435,6 +550,10 @@ def process_input_file(input_path: str, output_dir: str) -> Optional[Tuple[str, 
         
         # Try to create each variant
         for variant_key, config in VARIANT_CONFIGS.items():
+            # skip disabled variants
+            if not config.get('enabled', True):
+                continue
+
             cursed_ammo, cursed_bullet, cursed_recipe = create_cursed_ammo_variant(
                 root, ammo_type, variant_key, config, ammo_folder
             )
@@ -521,19 +640,53 @@ def generate_patch_file(ammo_set_infos: List[Tuple[str, str]], output_base_dir: 
 
 
 def create_texture_folders(workspace_root: Path, ammo_folders: set) -> None:
-    """Create texture folders for all variants in all ammo types.
-    
-    Args:
-        workspace_root: Root path of the workspace
-        ammo_folders: Set of ammo folder names (e.g., {'Rifle', 'Pistol'})
+    """Create texture folders for all variants in all ammo types and copy matching PNGs.
+
+    For each variant folder created we copy a single PNG named exactly
+    `<texture_suffix>.png` from the existing `Textures` tree into the
+    new folder. If the source PNG is not found a warning is printed; existing
+    destination files are not overwritten.
     """
     texture_base = workspace_root / "Textures" / "Things" / "Ammo"
-    
+
     for ammo_folder in ammo_folders:
         for variant_key, config in VARIANT_CONFIGS.items():
+            # skip disabled variants
+            if not config.get('enabled', True):
+                continue
+
             texture_path = texture_base / ammo_folder / config['texture_suffix']
             texture_path.mkdir(parents=True, exist_ok=True)
             print(f"[OK] Created texture folder: {texture_path}")
+
+            # Prefer a source PNG in the same ammo folder, then fall back to any match
+            src_png_name = f"{config['texture_suffix']}.png"
+            preferred_src = texture_base / ammo_folder / src_png_name
+            src_path = None
+
+            if preferred_src.exists():
+                src_path = preferred_src
+            else:
+                # Search under Textures for a matching PNG (first match wins)
+                search_root = workspace_root / "Textures"
+                for p in search_root.rglob(src_png_name):
+                    src_path = p
+                    break
+
+            if src_path is None:
+                print(f"[WARN] Source texture not found for '{config['texture_suffix']}' (expected '{src_png_name}'). Skipping copy.")
+                continue
+
+            dest_png = texture_path / src_png_name
+            if dest_png.exists():
+                print(f"[SKIP] Destination texture already exists: {dest_png}")
+                continue
+
+            try:
+                shutil.copy2(src_path, dest_png)
+                print(f"[OK] Copied texture: {src_path} -> {dest_png}")
+            except Exception as e:
+                print(f"[ERROR] Failed to copy texture {src_path} -> {dest_png}: {e}")
 
 
 def indent_tree(elem, level=0):

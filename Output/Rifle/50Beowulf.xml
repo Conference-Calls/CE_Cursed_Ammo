@@ -84,13 +84,17 @@
 		<defName>Bullet_50Beowulf_EAC_Silver</defName>
 		<label>.50 Beowulf bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>28</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetrationSharp>8</armorPenetrationSharp>
 			<armorPenetrationBlunt>63.28</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>28</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_50Beowulf_EAC_Silver</defName>
 		<label>make .50 Beowulf (Consecrated) cartridge x500</label>
-		<description>Craft 500 .50 Beowulf (Consecrated) cartridges.</description>
+		<description>Craft 100 .50 Beowulf (Consecrated) cartridges.</description>
 		<jobString>Making .50 Beowulf (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_50Beowulf_EAC_Silver>500</Ammo_50Beowulf_EAC_Silver>
+			<Ammo_50Beowulf_EAC_Silver>100</Ammo_50Beowulf_EAC_Silver>
 		</products>
 		<workAmount>4320</workAmount>
 	</RecipeDef>

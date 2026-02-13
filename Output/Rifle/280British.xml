@@ -84,13 +84,17 @@
 		<defName>Bullet_280British_EAC_Silver</defName>
 		<label>.280 British cartridge (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>22</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetrationSharp>7</armorPenetrationSharp>
 			<armorPenetrationBlunt>54.76</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>22</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_280British_EAC_Silver</defName>
 		<label>make .280 British Cartridge (Consecrated) cartridge x500</label>
-		<description>Craft 500 .280 British Cartridge (Consecrated) cartridges.</description>
+		<description>Craft 100 .280 British Cartridge (Consecrated) cartridges.</description>
 		<jobString>Making .280 British Cartridge (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_280British_EAC_Silver>500</Ammo_280British_EAC_Silver>
+			<Ammo_280British_EAC_Silver>100</Ammo_280British_EAC_Silver>
 		</products>
 		<workAmount>2880</workAmount>
 	</RecipeDef>

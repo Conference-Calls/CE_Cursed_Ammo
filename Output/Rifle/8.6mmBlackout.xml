@@ -84,13 +84,17 @@
 		<defName>Bullet_86x43mmBlackout_EAC_Silver</defName>
 		<label>8.6mm Blackout bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>26</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>7</armorPenetrationSharp>
 			<armorPenetrationBlunt>79.22</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>25</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_86x43mmBlackout_EAC_Silver</defName>
 		<label>make 8.6mm Blackout (Consecrated) cartridge x500</label>
-		<description>Craft 500 8.6mm Blackout (Consecrated) cartridges.</description>
+		<description>Craft 100 8.6mm Blackout (Consecrated) cartridges.</description>
 		<jobString>Making 8.6mm Blackout (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_86x43mmBlackout_EAC_Silver>500</Ammo_86x43mmBlackout_EAC_Silver>
+			<Ammo_86x43mmBlackout_EAC_Silver>100</Ammo_86x43mmBlackout_EAC_Silver>
 		</products>
 		<workAmount>3360</workAmount>
 	</RecipeDef>

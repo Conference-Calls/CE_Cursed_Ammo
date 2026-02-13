@@ -84,13 +84,17 @@
 		<defName>Bullet_4570Gov_EAC_Silver</defName>
 		<label>.45-70 Government cartridge (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>26</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>11</armorPenetrationSharp>
 			<armorPenetrationBlunt>47.32</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>25</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_4570Gov_EAC_Silver</defName>
 		<label>make .45-70 Government cartridge (Consecrated) cartridge x500</label>
-		<description>Craft 500 .45-70 Government cartridge (Consecrated) cartridges.</description>
+		<description>Craft 100 .45-70 Government cartridge (Consecrated) cartridges.</description>
 		<jobString>Making .45-70 Government cartridge (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_4570Gov_EAC_Silver>500</Ammo_4570Gov_EAC_Silver>
+			<Ammo_4570Gov_EAC_Silver>100</Ammo_4570Gov_EAC_Silver>
 		</products>
 		<workAmount>4560</workAmount>
 	</RecipeDef>

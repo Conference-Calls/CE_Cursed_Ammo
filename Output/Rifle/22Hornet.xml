@@ -14,13 +14,17 @@
 		<defName>Bullet_22Hornet_EAC_Silver</defName>
 		<label>.22 Hornet bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>14</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>6</damageAmountBase>
+			<armorPenetrationSharp>4</armorPenetrationSharp>
 			<armorPenetrationBlunt>20.09</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>15</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -28,7 +32,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_22Hornet_EAC_Silver</defName>
 		<label>make .22 Hornet (Consecrated) cartridge x500</label>
-		<description>Craft 500 .22 Hornet (Consecrated) cartridges.</description>
+		<description>Craft 100 .22 Hornet (Consecrated) cartridges.</description>
 		<jobString>Making .22 Hornet (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -55,7 +59,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_22Hornet_EAC_Silver>500</Ammo_22Hornet_EAC_Silver>
+			<Ammo_22Hornet_EAC_Silver>100</Ammo_22Hornet_EAC_Silver>
 		</products>
 		<workAmount>960</workAmount>
 	</RecipeDef>

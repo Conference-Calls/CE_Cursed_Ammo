@@ -84,13 +84,17 @@
 		<defName>Bullet_44-40Winchester_EAC_Silver</defName>
 		<label>.44-40 Winchester bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>20</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationSharp>9</armorPenetrationSharp>
 			<armorPenetrationBlunt>28.6</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
 					<amount>1</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>20</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -98,7 +102,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_44-40Winchester_EAC_Silver</defName>
 		<label>make .44-40 Winchester cartridge (Consecrated) cartridge x500</label>
-		<description>Craft 500 .44-40 Winchester cartridge (Consecrated) cartridges.</description>
+		<description>Craft 100 .44-40 Winchester cartridge (Consecrated) cartridges.</description>
 		<jobString>Making .44-40 Winchester cartridge (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -125,7 +129,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_44-40Winchester_EAC_Silver>500</Ammo_44-40Winchester_EAC_Silver>
+			<Ammo_44-40Winchester_EAC_Silver>100</Ammo_44-40Winchester_EAC_Silver>
 		</products>
 		<workAmount>3120</workAmount>
 	</RecipeDef>

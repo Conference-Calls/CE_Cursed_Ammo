@@ -14,13 +14,17 @@
 		<defName>Bullet_22WMR_EAC_Silver</defName>
 		<label>.22 WMR bullet (Consecrated)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>10</damageAmountBase>
-			<armorPenetrationSharp>999999</armorPenetrationSharp>
+			<damageAmountBase>4</damageAmountBase>
+			<armorPenetrationSharp>4</armorPenetrationSharp>
 			<armorPenetrationBlunt>8.5</armorPenetrationBlunt>
 			<secondaryDamage>
 				<li>
 					<def>EMP</def>
-					<amount>1</amount>
+					<amount>0</amount>
+				</li>
+				<li>
+					<def>Psychic</def>
+					<amount>10</amount>
 				</li>
 			</secondaryDamage>
 		</projectile>
@@ -28,7 +32,7 @@
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_22WMR_EAC_Silver</defName>
 		<label>make .22 WMR (Consecrated) cartridge x500</label>
-		<description>Craft 500 .22 WMR (Consecrated) cartridges.</description>
+		<description>Craft 100 .22 WMR (Consecrated) cartridges.</description>
 		<jobString>Making .22 WMR (Consecrated) cartridges.</jobString>
 		<ingredients>
 			<li>
@@ -55,7 +59,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_22WMR_EAC_Silver>500</Ammo_22WMR_EAC_Silver>
+			<Ammo_22WMR_EAC_Silver>100</Ammo_22WMR_EAC_Silver>
 		</products>
 		<workAmount>960</workAmount>
 	</RecipeDef>
